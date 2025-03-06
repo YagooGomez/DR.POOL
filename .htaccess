@@ -1,0 +1,8 @@
+
+RewriteEngine on
+
+RewriteOptions inherit
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^www\.drpool\.pt$
+RewriteRule ^(.*)$ "https\:\/\/drpool\.pt\/$1" [R=301,L]

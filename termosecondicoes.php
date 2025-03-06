@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>dr pool®</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logotipos/Icons/DR Pool Small Logo.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS Files -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <?php
+  include "header.php";
+  ?>
+
+  <main id="main">
+        <section id="posts" class="posts" style="text-align: center;">
+           <div class="container-md" data-aos="fade-in">
+        <div class="row">
+          <div class="col-12">
+            <br>
+            <p style="text-align:center; font-size:40px; color:#00aad7;"><b>TERMOS E CONDIÇÕES</b><br><br>
+              <div style="text-align:justify;">
+                  <p style="text-align: center;"><b>1. ACORDO ENTRE O UTILIZADOR E A NOSSA EMPRESA</b><br></p><p>O site da nossa empresa tem um endereço composto por um conjunto de páginas. 
+                  O site é apresentado na condição do utilizador aceitar em não modificar os termos e as condições contidas no presente documento, ou seja, para utilizar este site, o utilizador aceita os presentes termos de uso apresentados. 
+                  </p>
+                  <p style="text-align: center;"><b>2. MODIFICAÇÃO DOS TERMOS DE USO </b><br></p><p>A nossa empresa reserva-se no direito de modificar os termos nas quais o site é apresentado a qualquer momento. É aconselhado ao utilizador que visite regularmente o regulamento da presente página, por forma a ficar atualizado dos Termos de Uso do site da empresa. 
+                  </p>
+                  <p style="text-align: center;"><b>3. REDIRECCIONAMENTO PARA OUTROS SITES</b><br></p><p>O site da nossa empresa pode conter o direcionamento (ligações) para sites externos. Os sites direcionados não estão sob o controlo da empresa nem nos responsabilizamos pelo conteúdo de qualquer site direcionado, inclusive para qualquer limite de algum direcionamento contido num site direcionado, ou troca ou atualizações de algum site direcionado. O site da empresa oferece-lhe esses direcionamentos apenas como uma conveniência e a inclusão não transfere pela empresa a aceitação do site visitado ou qualquer associação com os seus operadores. 
+                  </p>
+                  <p style="text-align: center;"><b>4. USO ILEGAL OU PROIBIDO </b><br></p><p>Ao utilizar o site da nossa empresa o utilizador garante que não utilizará o mesmo para finalidade ilegal ou proibida. Não poderá usar o site de forma a danificar, sobrecarregar ou incapacitar o site, ou interferir no uso de alguma outra parte ou funcionamento. Não poderá obter ou tentar obter qualquer informação ou conteúdo intencionalmente não disponibilizado ou publicado no site.
+                  </p>
+                 <p style="text-align: center;"><b>5. RENÚNCIA DE RESPONSABILIDADE </b><br></p><p>A informação, software, produtos e serviços incluídos no site ou disponibilizados através no nosso site podem incluir imprecisões ou erros tipográficos sendo que são efetuadas alterações periodicamente. O site e/ou fornecedores podem efetuar melhorias ou mudanças no site a qualquer momento. 
+                  A nossa empresa e/ou fornecedores não se responsabilizam pela fiabilidade, disponibilidade e precisão das informações, dos programas, produtos, serviços, imagens e gráficos contidos no site nem pelo uso indevido das informações, programas, produtos, serviços, imagens e gráficos, os quais são fornecidos de forma original sem nenhuma garantia ou condição de qualquer espécie. 
+                  O site da nossa empresa e/ou fornecedores por meio deste, renunciam todas as garantias e condições no que diz respeito a essas informações, programas, produtos, serviços, imagens e gráficos, incluindo todas as garantias e condições afetas na comercialização e no uso em aplicação específica. 
+
+                  </p>
+                  <p style="text-align: center;"><b>6. CANCELAMENTO/RESTRIÇÃO DE ACESSO</b><br></p><p>A empresa reserva-se no direito de terminar o acesso do utilizador ao site e os serviços relacionados ou parte deles a qualquer momento, sem qualquer aviso ou observação. O ato do “Uso ilegal” do site neste acordo é regido pela lei portuguesa em todas as altercações que aconteçam relacionadas ao uso do site. O uso do site é desautorizado em qualquer jurisdição onde este acordo não tenha efeito a todas as partes deste acordo e condições, incluindo este parágrafo. 
+                  O utilizador concorda que nenhuma associação, parceria, emprego, ou relação existe entre o utilizador e o site e em consequência deste acordo ou uso do site. A atuação da empresa neste acordo está sujeita às leis existentes e ao processo legal, e nada contido neste acordo revoga os direitos do site em cumprir com pedidos ou exigências do governo ou de lei, para o uso do site da nossa empresa. 
+                  Se qualquer parte deste acordo for determinada inválida, imprevisível ou em desacordo com a lei, então a parte julgada inválida, será substituída por uma parte válida, adequada e que combine o mais próximo possível da intenção original, e o restante do acordo mantêm-se. Este acordo constitui o acordo inteiro entre o utilizador e a empresa com respeito ao site da nossa empresa e substitui todas as comunicações e propostas prévias, eletrónicas, orais ou escritas, entre o utilizador e a empresa com respeito ao presente site. Uma versão impressa deste acordo e de toda a informação contida no formulário eletrónico poderá ser requisitada nos procedimentos judiciais e administrativos referentes a este acordo. 
+                  </p>
+                 <p style="text-align: center;"><b>7. OBSERVAÇÕES DE DIREITOS DE AUTOR E DA MARCA REGISTADA </b><br></p><p>Todo o conteúdo presente no site, textos, imagens, gráficos, sons, vídeos, animação, downloads, assim como a forma como são apresentados, a estrutura do site e a disposição dos elementos, são todos eles, sem exceção, sujeitos aos direitos de autor da nossa marca, sempre que não seja dada indicação em contrário. 
+                  Não é concedido nenhum tipo de licença ou direito de propriedade sobre a informação presente no site, pelo que, não poderá efetuar reprodução do conteúdo do site. Nenhum conteúdo presente no site pode ser copiado, distribuído, modificado ou colocado noutro site, sem o prévio consentimento, por escrito, da marca. 
+
+                  </p>
+                  <p style="text-align: center;"><b>8. MARCAS REGISTADAS </b><br></p><p>Todos os serviços e marcas da empresa em questão, encontram-se registados. 
+                  </p>
+                  <p style="text-align: center;"><b>9. LEI APLICÁVEL </b><br></p><p>A presente página e os Termos de Uso contidos foram criados de acordo com a legislação portuguesa. Em caso de divergência ou conflito na interpretação da informação será submetido ao tribunal português competente para análise.
+                  </p>
+                  <br>
+                  <img src="assets/img/drpool/piscinaQuemSomos.jpeg" width="100%">
+</div>
+</p>
+                 </div>
+              </div>
+        </div>
+      </div>
+        </section>
+  
+    
+
+
+  </main><!-- End #main -->
+
+  <footer style=" position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;">
+      <table >
+        <tr>
+           <td><br><img src="assets/img/Logotipos/IMPIC logo.png" width="70px"></td>
+           <td><br><img src="assets/img/Logotipos/AICCOPN logo.png" width="70px"></td>
+           <td><br><img src="assets/img/Logotipos/APP logo.png" width="70px"></td>
+        </tr>
+      </table>
+  </footer>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
