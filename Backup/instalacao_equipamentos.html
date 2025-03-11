@@ -49,7 +49,7 @@
         <ul>
           <li><a href="index.html">INICIO</a></li>
           <li><a href="quem_somos.html">QUEM SOMOS</a></li>
-           <li><a href="marcasparceiras.html">NOSSOS PARCEIROS</a></li>
+           <!-- <li><a href="marcasparceiras.html">NOSSOS PARCEIROS</a></li> -->
 
            <li class="dropdown"><a href="#"><span>SERVIÇOS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
            
@@ -203,25 +203,126 @@
 
   </main><!-- End #main -->
 
-  <footer style=" position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem; display: inline-block;">
-      <table >
-        <tr>
-           <td ><br><img src="assets/img/Logotipos/IMPIC logo.png" width="70px"></td>
-           <td ><br><img src="assets/img/Logotipos/AICCOPN logo.png" width="70px"></td>
-           <td ><br><img src="assets/img/Logotipos/APP logo.png" width="70px"></td>
-          <td style="text-align: center;">
-            <p style="text-align: center; font-color:white;"><br><a href="termosecondicoes.html">Termos e Condições </a>| <a href="politicadeprivacidade.html">Política de Privacidade</a></p>
-          </td>
-        </tr>
+  <!-- ======= Footer ======= -->
+  
+  <style>
+    /* Enhanced Footer Styles */
+    footer {
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 0;
+      background-color: #1d4a74; /* Dark blue background */
+      color: rgb(0, 0, 0);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+      z-index: 1000; /* Ensures footer stays on top of other content */
+      border-top: 3px solid #00aad7; /* Accent color border */
+    }
+    
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.8rem 2rem;
+    }
+    
+    /* Logo section styling */
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    
+    .logo-item {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .logo-item img {
+      max-height: 50px;
+      width: auto;
+      transition: transform 0.3s ease;
+      filter: brightness(1) invert(0); /* Make logos white */
+      opacity: 0.9;
+    }
+    
+    .logo-item:hover img {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    
+    .logo-item::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #00aad7;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    .logo-item:hover::after {
+      width: 100%;
+    }
+    
+    /* Footer links section */
+    .footer-links {
+      text-align: right;
+    }
+    
+    .footer-links a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: 6px;
+      background-color: #1d4a74;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.3px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-links a:hover {
+      background-color: rgba(0, 170, 215, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .footer-links a:active {
+      transform: translateY(-1px);
+    }
+  </style>
 
-          
-       
-      </table>
+  <!-- Enhanced Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logos">
+        <div class="logo-item">
+          <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.livroreclamacoes.pt/" target="_blank">
+          <img src="https://www.ourivesariaoliveiras.pt/image/catalog/livro-reclamacoes-eletronico.png" width="140" height="50" alt="Livro de Reclamações">
+        </a>
+      </div>
+    </div>
   </footer>
+  
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->

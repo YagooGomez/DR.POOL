@@ -49,7 +49,7 @@
         <ul>
           <li><a href="index.html">INICIO</a></li>
           <li><a href="quem_somos.html">QUEM SOMOS</a></li>
-           <li><a href="marcasparceiras.html">NOSSOS PARCEIROS</a></li>
+           <!-- <li><a href="marcasparceiras.html">NOSSOS PARCEIROS</a></li> -->
 
            <li class="dropdown"><a href="#"><span>SERVIÇOS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
            
@@ -103,6 +103,7 @@
     <table  width="100%" height="100%" background="assets/img/drpool/clark-tai-nq18MYhxdGs-unsplash-scaled.jpg" >
       <tr>
         <td colspan="2">
+          <br>
           <p style="font-size:40px; color:white; text-align: center;"><b>CONTACTOS</b></p>
         </td>
        
@@ -111,7 +112,7 @@
         <td style="padding-left:100px;">
           <p style="color:white;"><b>Visite-nos</b><br><br>
             <b>Morada:</b> Rua Monte Castelo 720-r/c-E<br>4460-055 Guifões GUIFÕES-Portugal<br><br>
-            <b>Telefone:</b> 226007324<br>
+            <b>Telefone:</b> 229 540 579<br>
             <b>Contacto Whatsapp:</b> +351 967 324 344<br>
             <b>Email:</b> drpool@drpool.pt</p>
         </td>
@@ -148,14 +149,14 @@
       <tr>
         <td style="padding-left:100px;">
           <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c"><img src="assets/img/Logotipos/Icons/FaceBook Branco.png" width="3%"></a> &nbsp;
-           <a href="https://www.instagram.com/drpool-oficial/"><img src="assets/img/Logotipos/Icons/Instagram Branco.png" width="3%"></a>&nbsp;
+           <a href="https://www.instagram.com/drpool_oficial"><img src="assets/img/Logotipos/Icons/Instagram Branco.png" width="3%"></a>&nbsp;
             <a href="https://api.whatsapp.com/send?phone=00351967324344"><img src="assets/img/Logotipos/Icons/WhatsApp Branco.png" width="3%"></a>
         </td>
       </tr>
        <tr>
         <td style="padding-left:100px;">
           <br>
-          <img src="assets/img/mapa.png" width="350px"><br><br>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.106457697047!2d-8.67441242390533!3d41.197652571324596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2468b2656daf01%3A0x2737372a2d11c9af!2sR.%20Monte%20Castêlo%20720%2C%204460-055%20Guifões!5e0!3m2!1spt-PT!2spt!4v1741702382398!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
         </td>
       </tr>
       <tr>
@@ -167,19 +168,125 @@
 
   <!-- ======= Footer ======= -->
   
- <footer style=" position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;">
-      <table>
-        <tr>
-           <td><br><img src="assets/img/Logotipos/IMPIC logo.png" width="70px"></td>
-           <td><br><img src="assets/img/Logotipos/AICCOPN logo.png" width="70px"></td>
-           <td><br><img src="assets/img/Logotipos/APP logo.png" width="70px"></td>
-        </tr>
-      </table>
+  <style>
+    /* Enhanced Footer Styles */
+    footer {
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 0;
+      background-color: #1d4a74; /* Dark blue background */
+      color: rgb(0, 0, 0);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+      z-index: 1000; /* Ensures footer stays on top of other content */
+      border-top: 3px solid #00aad7; /* Accent color border */
+    }
+    
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.8rem 2rem;
+    }
+    
+    /* Logo section styling */
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    
+    .logo-item {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .logo-item img {
+      max-height: 50px;
+      width: auto;
+      transition: transform 0.3s ease;
+      filter: brightness(1) invert(0); /* Make logos white */
+      opacity: 0.9;
+    }
+    
+    .logo-item:hover img {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    
+    .logo-item::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #00aad7;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    .logo-item:hover::after {
+      width: 100%;
+    }
+    
+    /* Footer links section */
+    .footer-links {
+      text-align: right;
+    }
+    
+    .footer-links a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: 6px;
+      background-color: #1d4a74;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.3px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-links a:hover {
+      background-color: rgba(0, 170, 215, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .footer-links a:active {
+      transform: translateY(-1px);
+    }
+  </style>
+
+  <!-- Enhanced Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logos">
+        <div class="logo-item">
+          <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.livroreclamacoes.pt/" target="_blank">
+          <img src="https://www.ourivesariaoliveiras.pt/image/catalog/livro-reclamacoes-eletronico.png" width="140" height="50" alt="Livro de Reclamações">
+        </a>
+      </div>
+    </div>
   </footer>
+
+
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
