@@ -8,6 +8,7 @@
 
 body {
   color: rgba(var(--color-primary-rgb), 1);
+  min-width: 1000px;
 }
 
 a {
@@ -32,6 +33,8 @@ h6 {
 #main {
   margin-top: 90px;
 }
+
+
 
 /*--------------------------------------------------------------
 # Sections & Section Header
@@ -1277,8 +1280,9 @@ section {
 
 .footer .footer-legal {
   background:white ;
-  padding: 40px 0;
-
+  padding: 40px 15px;
+  border-radius: 15px;
+  
 }
 
 .footer .footer-legal .social-links a {
