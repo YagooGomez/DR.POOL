@@ -55,6 +55,7 @@
       height: 250px;
       overflow: hidden;
       margin-bottom: 1.5rem;
+      border-radius: 50px;
     }
 
     @media (min-width: 768px) {
@@ -149,10 +150,14 @@
       font-size: clamp(0.75rem, 2vw, 0.875rem);
     }
 
-    /* Media Queries */
+    /* Fix for alternating layout in mobile view */
     @media (max-width: 767px) {
       .post-entry-2.half {
         flex-direction: column !important;
+      }
+
+      .order-md-1 {
+        order: 1 !important;
       }
 
       .order-2 {
@@ -160,10 +165,8 @@
       }
 
       .ps-md-5, .pe-md-5 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        width: 100% !important;
-        text-align: center !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
       }
 
       .me-4 {
@@ -171,7 +174,19 @@
       }
 
       .service-content {
-        text-align: center !important;
+        text-align: center;
+        padding: 0 1rem;
+        margin-top: 1rem !important;
+      }
+      
+      /* Add space between sections on mobile */
+      .service-section {
+        margin-bottom: 3rem;
+      }
+      
+      /* Fix for main content padding on mobile */
+      #main {
+        padding-top: 80px;
       }
     }
 
@@ -179,6 +194,16 @@
       .ps-md-5, .pe-md-5 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
+      }
+      
+      /* Adjust image container width for tablets */
+      .service-image-container {
+        width: 45%;
+      }
+      
+      /* Fix spacing between image and content */
+      .me-4 {
+        margin-right: 1rem !important;
       }
     }
 
@@ -190,10 +215,22 @@
       
       .rounded-img {
         height: 200px;
+        border-radius: 30px;
       }
       
       .service-image-container {
         height: 200px;
+        border-radius: 30px;
+      }
+      
+      /* Improve section spacing on small devices */
+      .section-title {
+        margin-top: 1.5rem;
+      }
+      
+      /* Adjust footer spacing on small devices */
+      .footer-logos {
+        gap: 0.5rem;
       }
     }
 
@@ -229,10 +266,38 @@
       .rounded-img {
         border-radius: 30px;
       }
+      
+      .service-image-container {
+        border-radius: 30px;
+      }
 
       .footer-logos img {
         max-width: 80px;
       }
+      
+      /* Fix header spacing on very small devices */
+      .header {
+        padding: 10px 0;
+      }
+      
+      .logo img {
+        max-height: 40px;
+      }
+    }
+    
+    /* Fix for main content padding */
+    #main {
+      padding-top: 100px;
+    }
+    
+    /* Fix for service sections alignment */
+    .d-md-flex {
+      align-items: center;
+    }
+    
+    /* Ensure proper spacing between sections */
+    #posts {
+      padding: 2rem 0;
     }
   </style>
 </head>
@@ -308,7 +373,7 @@
           <!-- Service 1 -->
           <div class="col-12 service-section">
             <div class="d-md-flex post-entry-2 half">
-              <div class="service-image-container me-4">
+              <div class="service-image-container me-md-4">
                 <img class="rounded-img" src="assets/img/drpool/images (25).jpg" alt="Alterações de Formatos">
               </div>
               <div class="service-content ps-md-5 mt-4 mt-md-0">
@@ -323,7 +388,7 @@
               <div class="service-content pe-md-5 mt-4 mt-md-0 order-md-1">
                 <h2 class="service-title">Reparação de Pisos e Pavimentos</h2>
               </div>
-              <div class="service-image-container me-4 order-2">
+              <div class="service-image-container me-md-4 order-2">
                 <img class="rounded-img" src="assets/img/drpool/20.jpg" alt="Reparação de Pisos e Pavimentos">
               </div>
             </div>
@@ -332,7 +397,7 @@
           <!-- Service 3 -->
           <div class="col-12 service-section">
             <div class="d-md-flex post-entry-2 half">
-              <div class="service-image-container me-4">
+              <div class="service-image-container me-md-4">
                 <img class="rounded-img" src="assets/img/drpool/21.jpg" alt="Mudança de Pastilhas">
               </div>
               <div class="service-content ps-md-5 mt-4 mt-md-0">
@@ -347,7 +412,7 @@
               <div class="service-content pe-md-5 mt-4 mt-md-0 order-md-1">
                 <h2 class="service-title">Reparação e Preenchimento de Fendas e Rachas</h2>
               </div>
-              <div class="service-image-container me-4 order-2">
+              <div class="service-image-container me-md-4 order-2">
                 <img class="rounded-img" src="assets/img/drpool/22.jpg" alt="Reparação e Preenchimento de Fendas e Rachas">
               </div>
             </div>
@@ -356,7 +421,7 @@
           <!-- Service 5 -->
           <div class="col-12 service-section">
             <div class="d-md-flex post-entry-2 half">
-              <div class="service-image-container me-4">
+              <div class="service-image-container me-md-4">
                 <img class="rounded-img" src="assets/img/drpool/5.jpg" alt="Conversão do Revestimento de Piscinas">
               </div>
               <div class="service-content ps-md-5 mt-4 mt-md-0">
@@ -371,7 +436,7 @@
               <div class="service-content pe-md-5 mt-4 mt-md-0 order-md-1">
                 <h2 class="service-title">Reparação de Motores de Piscina</h2>
               </div>
-              <div class="service-image-container me-4 order-2">
+              <div class="service-image-container me-md-4 order-2">
                 <img class="rounded-img" src="assets/img/drpool/4.jpg" alt="Reparação de Motores de Piscina">
               </div>
             </div>
@@ -380,7 +445,7 @@
           <!-- Service 7 -->
           <div class="col-12 service-section">
             <div class="d-md-flex post-entry-2 half">
-              <div class="service-image-container me-4">
+              <div class="service-image-container me-md-4">
                 <img class="rounded-img" src="assets/img/drpool/23.jpg" alt="Reparação de Tubagens">
               </div>
               <div class="service-content ps-md-5 mt-4 mt-md-0">

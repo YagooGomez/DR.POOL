@@ -67,28 +67,75 @@
       margin-bottom: 3rem;
     }
 
+    /* Estilos base para os itens de serviço */
+    .post-entry-2.half {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .post-entry-2.half > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .post-entry-2.half > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     /* Media queries para diferentes tamanhos de tela */
-    @media (max-width: 767px) {
-      .post-entry-2.half {
-        flex-direction: column !important;
-      }
-      
-      .post-entry-2.half .order-2 {
-        order: 0 !important;
+    @media (min-width: 768px) {
+      .post-entry-2.half > a {
+        width: 50%;
+        padding-right: 15px;
       }
       
       .post-entry-2.half > div {
-        width: 100% !important;
-        text-align: center !important;
-        padding: 0 !important;
-        margin-top: 1.5rem !important;
+        width: 50%;
+        padding-left: 15px;
+      }
+      
+      .post-entry-2.half.right-align > a {
+        order: 2;
+        padding-right: 0;
+        padding-left: 15px;
+      }
+      
+      .post-entry-2.half.right-align > div {
+        order: 1;
+        padding-left: 0;
+        padding-right: 15px;
+        text-align: right;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .post-entry-2.half {
+        flex-direction: column;
+      }
+      
+      .post-entry-2.half > a,
+      .post-entry-2.half > div {
+        width: 100%;
+        padding: 0;
+        text-align: center;
       }
       
       .post-entry-2.half > a {
-        width: 100%;
-        margin: 0 !important;
-        display: flex;
-        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+      
+      .post-entry-2.half.right-align > a {
+        order: 1;
+      }
+      
+      .post-entry-2.half.right-align > div {
+        order: 2;
+        text-align: center;
       }
       
       .rounded-img {
@@ -96,17 +143,14 @@
       }
     }
 
-    @media (min-width: 768px) and (max-width: 991px) {
-      .post-entry-2.half > div {
-        width: 100% !important;
-        padding: 0 1rem !important;
-      }
-    }
-
     @media (max-width: 575px) {
       .container {
         padding-left: 15px;
         padding-right: 15px;
+      }
+      
+      .service-item {
+        margin-bottom: 2rem;
       }
     }
 
@@ -157,176 +201,8 @@
         font-size: 2.25rem;
       }
     }
-  </style>
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-       <img src="assets/img/Logotipos/drpoolLogotipo.png" alt=""> 
-        
-      </a>
-
-     <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html">INICIO</a></li>
-          <li><a href="quem_somos.html">QUEM SOMOS</a></li>
-           <!-- <li><a href="marcasparceiras.html">NOSSOS PARCEIROS</a></li> -->
-
-           <li class="dropdown"><a href="#"><span>SERVIÇOS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-           
-            <ul>
-              <li><a href="construcao.html">Construção de Piscinas</a></li>
-              <li><a href="reparacao_piscinas.html">Reparação de Piscinas</a></li>
-              <li><a href="manutencaolimpeza_piscinas.html">Manutenção e Limpeza de Piscinas</a></li>
-             <li><a href="instalacao_equipamentos.html">Instalação de Equipamentos</a></li>
-            </ul>
-          </li>
-           <li class="dropdown"><a href="#"><span>PRODUTOS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="material_exterior_piscina.html">Material de Exterior de Piscina</a></li>
-          
-              <li><a href="venda_consumiveis.html">Venda de Consúmiveis</a></li>
-            </ul>
-          </li>
-            <li><a href="piscinas.html">PISCINAS</a></li>
-          <li><a href="contactos.html">CONTACTOS</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-
-      <div class="position-relative">
-
-        <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c" class="mx-2"><img width="30" height="30" src="assets/img/drpool/fbIcon.png" alt="Facebook"></a>
-       <!-- <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
-        <a href="#" class="mx-2"><span class="bi-instagram"></span></a> -->
-
-        <a href="#" class="mx-2 js-search-open"><img width="30" height="30" src="assets/img/drpool/searchIcon.png" alt="Search"></a>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-
-        <!-- ======= Search Form ======= -->
-        <div class="search-form-wrap js-search-form-wrap">
-          <form action="search-result.html" class="search-form">
-            <span class="icon bi-search"></span>
-            <input type="text" placeholder="Search" class="form-control">
-            <button class="btn js-search-close"><span class="bi-x"></span></button>
-          </form>
-        </div><!-- End Search Form -->
-
-      </div>
-
-    </div>
-
-  </header><!-- End Header -->
-
-  <main id="main">
-
-    <section id="posts" class="posts">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-12 text-center mb-5">
-            <h1 class="service-title">Instalação de Equipamentos</h1>
-            <p class="service-intro">
-              <b>Qualquer equipamento necessário para um bom funcionamento da piscina, como por exemplo: bombas de filtração, filtros, cloradores salinos, bombas de aquecimento, coberturas, entre outros, está ao seu dispor.<br><br>
-              <span class="service-highlight">Dispomos de técnicos especializados que colaboram para a elaboração de um serviço de excelência</span></b>
-            </p>
-          </div>
-        </div>
-
-        <div class="row mb-5">
-
-          <div class="d-md-flex post-entry-2 half service-item">
-            <a href="#" class="me-4 thumbnail">
-              <img class="rounded-img" src="assets/img/drpool/10.jpg" alt="Coberturas para Piscinas Planas">
-            </a>
-            <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-              <div class="post-meta mt-4">&nbsp;</div>
-              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Planas</h2>
-            </div>
-          </div>
-
-          <div class="d-md-flex post-entry-2 half service-item" style="text-align: right; height:50%;">
-            <a href="#" class="me-4 thumbnail order-2">
-              <img class="rounded-img" src="assets/img/drpool/40.jpg" alt="Coberturas para Piscinas Baixas">
-            </a>
-            <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-              <div class="post-meta mt-4">&nbsp;</div>
-              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Baixas</h2>
-            </div>
-          </div>
-
-          <div class="d-md-flex post-entry-2 half service-item">
-            <a href="#" class="me-4 thumbnail">
-              <img class="rounded-img" src="assets/img/drpool/41.jpg" alt="Coberturas para Piscinas Médias">
-            </a>
-            <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-              <div class="post-meta mt-4">&nbsp;</div>
-              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Médias</h2>
-            </div>
-          </div>
-
-          <div class="d-md-flex post-entry-2 half service-item" style="text-align: right; height:50%;">
-            <a href="#" class="me-4 thumbnail order-2">
-              <img class="rounded-img" src="assets/img/drpool/9.jpg" alt="Coberturas para Piscinas Altas">
-            </a>
-            <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-              <div class="post-meta mt-4">&nbsp;</div>
-              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Altas</h2>
-            </div>
-          </div>
-
-          <div class="d-md-flex post-entry-2 half service-item">
-            <a href="#" class="me-4 thumbnail">
-              <img class="rounded-img" src="assets/img/drpool/35.jpg" alt="Luzes Subaquáticas">
-            </a>
-            <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-              <div class="post-meta mt-4">&nbsp;</div>
-              <h2 class="service-item-title">Instalação de Luzes Subaquáticas</h2>
-            </div>
-          </div>
-
-          <div class="d-md-flex post-entry-2 half service-item" style="text-align: right; height:50%;">
-            <a href="#" class="me-4 thumbnail order-2">
-              <img class="rounded-img" src="assets/img/drpool/34.jpg" alt="Focos LED">
-            </a>
-            <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-              <div class="post-meta mt-4">&nbsp;</div>
-              <h2 class="service-item-title">Instalação de Focos LED</h2>
-            </div>
-          </div>
-        
-          <div class="d-md-flex post-entry-2 half service-item">
-            <a href="#" class="me-4 thumbnail">
-              <img class="rounded-img" src="assets/img/drpool/36.jpg" alt="Sistemas de Segurança">
-            </a>
-            <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-              <div class="post-meta mt-4">&nbsp;</div>
-              <h2 class="service-item-title">Instalação de Sistemas de Segurança</h2>
-            </div>
-          </div>
-
-          <div class="d-md-flex post-entry-2 half service-item" style="text-align: right; height:50%;">
-            <a href="#" class="me-4 thumbnail order-2">
-              <img class="rounded-img" src="assets/img/drpool/37.jpg" alt="Sistemas de Tratamento de Água">
-            </a>
-            <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-              <div class="post-meta mt-4">&nbsp;</div>
-              <h2 class="service-item-title">Instalação de Sistemas de Tratamento de Água</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  
-  <style>
+    
+    /* Estilos para o footer */
     footer {
       width: 100%;
       background-color: #012241;
@@ -401,7 +277,7 @@
       height: auto;
     }
   
-    /* Media Queries para Responsividade */
+    /* Media Queries para Responsividade do footer */
   
     /* Telas pequenas (celulares) */
     @media (max-width: 600px) {
@@ -505,7 +381,173 @@
       }
     }
   </style>
-  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+       <img src="assets/img/Logotipos/drpoolLogotipo.png" alt=""> 
+        
+      </a>
+
+     <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="quem_somos.html">QUEM SOMOS</a></li>
+           <!-- <li><a href="marcasparceiras.html">NOSSOS PARCEIROS</a></li> -->
+
+           <li class="dropdown"><a href="#"><span>SERVIÇOS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+           
+            <ul>
+              <li><a href="construcao.html">Construção de Piscinas</a></li>
+              <li><a href="reparacao_piscinas.html">Reparação de Piscinas</a></li>
+              <li><a href="manutencaolimpeza_piscinas.html">Manutenção e Limpeza de Piscinas</a></li>
+             <li><a href="instalacao_equipamentos.html">Instalação de Equipamentos</a></li>
+            </ul>
+          </li>
+           <li class="dropdown"><a href="#"><span>PRODUTOS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="material_exterior_piscina.html">Material de Exterior de Piscina</a></li>
+          
+              <li><a href="venda_consumiveis.html">Venda de Consúmiveis</a></li>
+            </ul>
+          </li>
+            <li><a href="piscinas.html">PISCINAS</a></li>
+          <li><a href="contactos.html">CONTACTOS</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <div class="position-relative">
+
+        <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c" class="mx-2"><img width="30" height="30" src="assets/img/drpool/fbIcon.png" alt="Facebook"></a>
+       <!-- <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
+        <a href="#" class="mx-2"><span class="bi-instagram"></span></a> -->
+
+        <a href="#" class="mx-2 js-search-open"><img width="30" height="30" src="assets/img/drpool/searchIcon.png" alt="Search"></a>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+        <!-- ======= Search Form ======= -->
+        <div class="search-form-wrap js-search-form-wrap">
+          <form action="search-result.html" class="search-form">
+            <span class="icon bi-search"></span>
+            <input type="text" placeholder="Search" class="form-control">
+            <button class="btn js-search-close"><span class="bi-x"></span></button>
+          </form>
+        </div><!-- End Search Form -->
+
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <section id="posts" class="posts">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h1 class="service-title">Instalação de Equipamentos</h1>
+            <p class="service-intro">
+              <b>Qualquer equipamento necessário para um bom funcionamento da piscina, como por exemplo: bombas de filtração, filtros, cloradores salinos, bombas de aquecimento, coberturas, entre outros, está ao seu dispor.<br><br>
+              <span class="service-highlight">Dispomos de técnicos especializados que colaboram para a elaboração de um serviço de excelência</span></b>
+            </p>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+
+          <div class="post-entry-2 half service-item">
+            <a href="#">
+              <img class="rounded-img" src="assets/img/drpool/10.jpg" alt="Coberturas para Piscinas Planas">
+            </a>
+            <div>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Planas</h2>
+            </div>
+          </div>
+
+          <div class="post-entry-2 half right-align service-item">
+            <a href="#">
+              <img class="rounded-img" src="assets/img/drpool/40.jpg" alt="Coberturas para Piscinas Baixas">
+            </a>
+            <div>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Baixas</h2>
+            </div>
+          </div>
+
+          <div class="post-entry-2 half service-item">
+            <a href="#">
+              <img class="rounded-img" src="assets/img/drpool/41.jpg" alt="Coberturas para Piscinas Médias">
+            </a>
+            <div>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Médias</h2>
+            </div>
+          </div>
+
+          <div class="post-entry-2 half right-align service-item">
+            <a href="#">
+              <img class="rounded-img" src="assets/img/drpool/9.jpg" alt="Coberturas para Piscinas Altas">
+            </a>
+            <div>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Altas</h2>
+            </div>
+          </div>
+
+          <div class="post-entry-2 half service-item">
+            <a href="#">
+              <img class="rounded-img" src="assets/img/drpool/35.jpg" alt="Luzes Subaquáticas">
+            </a>
+            <div>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Luzes Subaquáticas</h2>
+            </div>
+          </div>
+
+          <div class="post-entry-2 half right-align service-item">
+            <a href="#">
+              <img class="rounded-img" src="assets/img/drpool/34.jpg" alt="Focos LED">
+            </a>
+            <div>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Focos LED</h2>
+            </div>
+          </div>
+        
+          <div class="post-entry-2 half service-item">
+            <a href="#">
+              <img class="rounded-img" src="assets/img/drpool/36.jpg" alt="Sistemas de Segurança">
+            </a>
+            <div>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Sistemas de Segurança</h2>
+            </div>
+          </div>
+
+          <div class="post-entry-2 half right-align service-item">
+            <a href="#">
+              <img class="rounded-img" src="assets/img/drpool/37.jpg" alt="Sistemas de Tratamento de Água">
+            </a>
+            <div>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Sistemas de Tratamento de Água</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
   <footer>
     <div class="footer-container">
       <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
