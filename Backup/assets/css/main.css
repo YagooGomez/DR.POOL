@@ -6,9 +6,15 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  min-height: 100vh; /* Garante que o mínimo é a altura da viewport /
+  height: auto; / Permite que o HTML e o body cresçam conforme necessário /
+  overflow-x: hidden; / Evita barras de rolagem laterais desnecessárias */
+}
+
 body {
   color: rgba(var(--color-primary-rgb), 1);
-  min-width: 1000px;
+  max-width: 100%;
 }
 
 a {
