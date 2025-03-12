@@ -41,7 +41,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-       <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150px"alt=""> 
+       <img src="assets/img/Logotipos/drpoolLogotipo.png" alt=""> 
         
       </a>
 
@@ -74,11 +74,11 @@
 
       <div class="position-relative">
 
-        <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c" class="mx-2"><img src="assets/img/drpool/fbIcon.png"></a>
+        <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c" class="mx-2"><img width="30" height="30" src="assets/img/drpool/fbIcon.png"></a>
        <!-- <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
         <a href="#" class="mx-2"><span class="bi-instagram"></span></a> -->
 
-        <a href="#" class="mx-2 js-search-open"><img src="assets/img/drpool/searchIcon.png"></a>
+        <a href="#" class="mx-2 js-search-open"><img width="30" height="30" src="assets/img/drpool/searchIcon.png"></a>
         <i class="bi bi-list mobile-nav-toggle"></i>
 
         <!-- ======= Search Form ======= -->
@@ -292,13 +292,12 @@
   
   .footer-info p {
     margin: 5px 0;
-    font-size: 20px;
+    font-size: 14px;
   }
   
   .footer-info a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
   }
   
   .footer-links {
@@ -311,7 +310,7 @@
   .footer-links a {
     color: white;
     text-decoration: none;
-    font-size: 20px; 
+    font-size: 14px; 
     padding-top: 0px;
   }
   
@@ -323,31 +322,20 @@
   /* Media Queries para Responsividade */
   
   /* Telas pequenas (celulares) */
-  @media (max-width: 425px) {
+  @media (max-width: 600px) {
     .footer-container {
       padding: 20px 15px;
     }
   
-    .footer-info p {
-    margin: 5px 0;
-    font-size: 30px;
-  }
-  
-  .footer-info a {
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-  }
-
-  .footer-logos {
+    .footer-logos {
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-around;
+      align-items: center;
     }
-
-    .footer-logos img {
-    max-width: 25%;
-    height: auto;
-  }
+  
+    .footer-info p {
+      font-size: 12px;
+    }
   
     .footer-links {
       flex-direction: column;
@@ -355,7 +343,7 @@
     }
   
     .footer-links a {
-      font-size: 30px;
+      font-size: 12px;
     }
   }
   
@@ -365,23 +353,13 @@
       padding: 20px 15px;
     }
   
-    .footer-container img {
-    width: 30%;
-    height: 30%;
-  }
-
-  .footer-logos img {
-    max-width: 25%;
-    height: auto;
-  }
-
     .footer-logos {
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-around;
     }
   
     .footer-info p {
-      font-size: 30px;
+      font-size: 13px;
     }
   
     .footer-links {
@@ -406,14 +384,14 @@
   
   
   </style>
-  
+  <footer>
   <div class="footer-container">
     <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
     <br>
     <div class="footer-logos">
-      <img src="assets/img/Logotipos/IMPIC logo.png" width="150" height="75" alt="IMPIC logo">
-      <img src="assets/img/Logotipos/AICCOPN logo.png" width="150" height="75" alt="AICCOPN logo">
-      <img src="assets/img/Logotipos/APP logo.png" width="150" height="75" alt="APP logo">
+      <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
+      <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
+      <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
     </div>
     <div class="footer-info">
       <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
