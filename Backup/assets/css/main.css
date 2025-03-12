@@ -371,7 +371,7 @@ section {
     justify-content: space-between;
     padding: 10px 20px;
     font-family: Montserrat;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 600;
     color: var(--color-primary);
     white-space: nowrap;
@@ -380,7 +380,7 @@ section {
 
   .navbar a i,
   .navbar a:focus i {
-    font-size: 12px;
+    font-size: 30px;
     line-height: 0;
     margin-left: 5px;
   }
@@ -412,14 +412,14 @@ section {
   .mobile-nav-toggle {
     display: inline-block;
     color: var(--color-secondary);
-    font-size: 28px;
+    font-size: 75px;
     cursor: pointer;
     line-height: 0;
     transition: 0.5s;
   }
 
   .mobile-nav-toggle.bi-x {
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   .mobile-nav-active {
@@ -1311,4 +1311,52 @@ section {
 
 .footer .credits a {
   color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 14px; /* Ajuste o tamanho do texto para telas menores */
+  }
+
+  .footer .footer-legal {
+    padding: 30px 15px; /* Ajuste o padding do bloco legal para telas menores */
+  }
+
+  .footer .footer-legal .social-links a {
+    width: 30px; /* Reduza o tamanho dos ícones sociais para telas menores */
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 12px; /* Ajuste ainda mais o tamanho do texto para telas pequenas */
+  }
+
+  .footer .footer-legal {
+    padding: 20px 15px; /* Ajuste adicional do padding para telas muito pequenas */
+  }
+
+  .footer .footer-legal .social-links a {
+    width: 25px; /* Reduza ainda mais o tamanho dos ícones para telas muito pequenas */
+    height: 25px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 479px) {
+  .footer {
+    font-size: 20px; /* Ajuste ainda mais o tamanho do texto para telas pequenas */
+  }
+
+  .footer .footer-legal {
+    padding: 20px 15px; /* Ajuste adicional do padding para telas muito pequenas */
+  }
+
+  .footer .footer-legal .social-links a {
+    width: 25px; /* Reduza ainda mais o tamanho dos ícones para telas muito pequenas */
+    height: 25px;
+    line-height: 25px;
+  }
 }
