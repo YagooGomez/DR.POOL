@@ -30,7 +30,134 @@
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Estilos responsivos adicionais */
+    .rounded-img {
+      border-radius: 50px;
+      width: 100%;
+      height: auto;
+      max-width: 550px;
+      object-fit: cover;
+    }
 
+    .service-title {
+      color: #00aad7;
+      font-weight: bold;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .service-intro {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      margin-bottom: 2rem;
+    }
+
+    .service-highlight {
+      color: #00aad7;
+    }
+
+    .service-item-title {
+      color: #00aad7;
+      font-weight: bold;
+      font-size: clamp(1.25rem, 3vw, 1.875rem);
+      margin-top: 1rem;
+    }
+
+    .service-item {
+      margin-bottom: 3rem;
+    }
+
+    /* Media queries para diferentes tamanhos de tela */
+    @media (max-width: 767px) {
+      .post-entry-2.half {
+        flex-direction: column !important;
+      }
+      
+      .post-entry-2.half .order-2 {
+        order: 0 !important;
+      }
+      
+      .post-entry-2.half > div {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+        margin-top: 1.5rem !important;
+      }
+      
+      .post-entry-2.half > a {
+        width: 100%;
+        margin: 0 !important;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .rounded-img {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .post-entry-2.half > div {
+        width: 100% !important;
+        padding: 0 1rem !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    /* Ajustes para o header em telas pequenas */
+    @media (max-width: 991px) {
+      .header .logo img {
+        max-height: 40px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .header .logo img {
+        max-height: 30px;
+      }
+      
+      .position-relative a.mx-2 {
+        margin-left: 0.25rem !important;
+        margin-right: 0.25rem !important;
+      }
+      
+      .position-relative a.mx-2 img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    /* Ajustes para telas muito grandes */
+    @media (min-width: 1600px) {
+      .container {
+        max-width: 1440px;
+      }
+    }
+
+    @media (min-width: 2000px) {
+      .container {
+        max-width: 1800px;
+      }
+      
+      .service-title {
+        font-size: 3rem;
+      }
+      
+      .service-intro {
+        font-size: 1.5rem;
+      }
+      
+      .service-item-title {
+        font-size: 2.25rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -74,11 +201,11 @@
 
       <div class="position-relative">
 
-        <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c" class="mx-2"><img width="30" height="30" src="assets/img/drpool/fbIcon.png"></a>
+        <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c" class="mx-2"><img width="30" height="30" src="assets/img/drpool/fbIcon.png" alt="Facebook"></a>
        <!-- <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
         <a href="#" class="mx-2"><span class="bi-instagram"></span></a> -->
 
-        <a href="#" class="mx-2 js-search-open"><img width="30" height="30" src="assets/img/drpool/searchIcon.png"></a>
+        <a href="#" class="mx-2 js-search-open"><img width="30" height="30" src="assets/img/drpool/searchIcon.png" alt="Search"></a>
         <i class="bi bi-list mobile-nav-toggle"></i>
 
         <!-- ======= Search Form ======= -->
@@ -96,109 +223,103 @@
 
   </header><!-- End Header -->
 
-
-
   <main id="main">
 
- <section id="posts" class="posts">
+    <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-12 text-center mb-5">
-           <p style="text-align:center; font-size:40px; color:#00aad7;"><b>Instalação de Equipamentos</b><br>
-           <p style="text-align:center;"><b>Qualquer equipamento necessário para um bom funcionamento da piscina, como por exemplo: bombas de filtração, filtros, cloradores salinos, bombas de aquecimento, coberturas, entre outros, está ao seu dispor.<br><br><span style="color:#00aad7;">Dispomos de técnicos especializados que colaboram para a elaboração de um serviço de excelência</span><br>
+            <h1 class="service-title">Instalação de Equipamentos</h1>
+            <p class="service-intro">
+              <b>Qualquer equipamento necessário para um bom funcionamento da piscina, como por exemplo: bombas de filtração, filtros, cloradores salinos, bombas de aquecimento, coberturas, entre outros, está ao seu dispor.<br><br>
+              <span class="service-highlight">Dispomos de técnicos especializados que colaboram para a elaboração de um serviço de excelência</span></b>
+            </p>
           </div>
         </div>
 
         <div class="row mb-5">
 
-          <div class="d-md-flex post-entry-2 half" >
-          <a href="#" class="me-4 thumbnail">
-            <img width="550px" height="250px" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;" src="assets/img/drpool/10.jpg">
-            </a>
-            <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%; ">
- <div class="post-meta mt-4">&nbsp;</div>
-              <br><br>
-              <p style="font-size:30px; color:#00aad7;"><b>Instalação de Coberturas para Piscinas Planas</b></p>
-            </div>
-          </div>
-
-          <div class="d-md-flex post-entry-2 half" style="text-align: right; height:50%;">
-           <a href="#" class="me-4 thumbnail order-2">
-              <img width="550px" height="250px" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;" src="assets/img/drpool/40.jpg">
-            </a>
-            <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-               <div class="post-meta mt-4">&nbsp;</div>
-              <br><br>
-             <p style=" font-size:30px; color:#00aad7;"><b>Instalação de Coberturas para Piscinas Baixas</b></p>
-            </div>
-          </div>
-
-           <div class="d-md-flex post-entry-2 half">
-          <a href="#" class="me-4 thumbnail">
-            <img width="550px" height="250px" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;" src="assets/img/drpool/41.jpg">
+          <div class="d-md-flex post-entry-2 half service-item">
+            <a href="#" class="me-4 thumbnail">
+              <img class="rounded-img" src="assets/img/drpool/10.jpg" alt="Coberturas para Piscinas Planas">
             </a>
             <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
- <div class="post-meta mt-4">&nbsp;</div>
-              <br><br>
-              <p style="font-size:30px; color:#00aad7;"><b>Instalação de Coberturas para Piscinas Médias</b></p>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Planas</h2>
             </div>
           </div>
 
-          <div class="d-md-flex post-entry-2 half" style="text-align: right; height:50%;">
-           <a href="#" class="me-4 thumbnail order-2">
-              <img width="550px" height="250px" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;" src="assets/img/drpool/9.jpg">
+          <div class="d-md-flex post-entry-2 half service-item" style="text-align: right; height:50%;">
+            <a href="#" class="me-4 thumbnail order-2">
+              <img class="rounded-img" src="assets/img/drpool/40.jpg" alt="Coberturas para Piscinas Baixas">
             </a>
             <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-               <div class="post-meta mt-4">&nbsp;</div>
-              <br><br>
-             <p style=" font-size:30px; color:#00aad7;"><b>Instalação de Coberturas para Piscinas Altas</b></p>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Baixas</h2>
             </div>
           </div>
 
-           <div class="d-md-flex post-entry-2 half">
-          <a href="#" class="me-4 thumbnail">
-            <img width="550px" height="250px" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;" src="assets/img/drpool/35.jpg">
+          <div class="d-md-flex post-entry-2 half service-item">
+            <a href="#" class="me-4 thumbnail">
+              <img class="rounded-img" src="assets/img/drpool/41.jpg" alt="Coberturas para Piscinas Médias">
             </a>
             <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
- <div class="post-meta mt-4">&nbsp;</div>
-              <br><br>
-              <p style="font-size:30px; color:#00aad7;"><b>Instalação de Luzes Subaquáticas</b></p>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Médias</h2>
             </div>
           </div>
 
-              <div class="d-md-flex post-entry-2 half" style="text-align: right; height:50%;">
-           <a href="#" class="me-4 thumbnail order-2">
-              <img width="550px" height="250px" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;" src="assets/img/drpool/34.jpg">
+          <div class="d-md-flex post-entry-2 half service-item" style="text-align: right; height:50%;">
+            <a href="#" class="me-4 thumbnail order-2">
+              <img class="rounded-img" src="assets/img/drpool/9.jpg" alt="Coberturas para Piscinas Altas">
             </a>
             <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-               <div class="post-meta mt-4">&nbsp;</div>
-              <br><br>
-             <p style=" font-size:30px; color:#00aad7;"><b>Instalação de Focos LED</b></p>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Coberturas para Piscinas Altas</h2>
+            </div>
+          </div>
+
+          <div class="d-md-flex post-entry-2 half service-item">
+            <a href="#" class="me-4 thumbnail">
+              <img class="rounded-img" src="assets/img/drpool/35.jpg" alt="Luzes Subaquáticas">
+            </a>
+            <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Luzes Subaquáticas</h2>
+            </div>
+          </div>
+
+          <div class="d-md-flex post-entry-2 half service-item" style="text-align: right; height:50%;">
+            <a href="#" class="me-4 thumbnail order-2">
+              <img class="rounded-img" src="assets/img/drpool/34.jpg" alt="Focos LED">
+            </a>
+            <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Focos LED</h2>
             </div>
           </div>
         
-
-        <div class="d-md-flex post-entry-2 half">
-          <a href="#" class="me-4 thumbnail">
-            <img width="550px" height="250px" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;" src="assets/img/drpool/36.jpg">
+          <div class="d-md-flex post-entry-2 half service-item">
+            <a href="#" class="me-4 thumbnail">
+              <img class="rounded-img" src="assets/img/drpool/36.jpg" alt="Sistemas de Segurança">
             </a>
             <div class="ps-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
- <div class="post-meta mt-4">&nbsp;</div>
-              <br><br>
-              <p style="font-size:30px; color:#00aad7;"><b>Instalação de Sistemas de Segurança</b></p>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Sistemas de Segurança</h2>
             </div>
           </div>
 
-          <div class="d-md-flex post-entry-2 half" style="text-align: right; height:50%;">
-           <a href="#" class="me-4 thumbnail order-2">
-              <img width="550px" height="250px" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;" src="assets/img/drpool/37.jpg">
+          <div class="d-md-flex post-entry-2 half service-item" style="text-align: right; height:50%;">
+            <a href="#" class="me-4 thumbnail order-2">
+              <img class="rounded-img" src="assets/img/drpool/37.jpg" alt="Sistemas de Tratamento de Água">
             </a>
             <div class="pe-md-5 mt-4 mt-md-0" style="width:50%; height:50%;">
-               <div class="post-meta mt-4">&nbsp;</div>
-              <br><br>
-             <p style=" font-size:30px; color:#00aad7;"><b>Instalação de Sistemas de Tratamento de Água</b></p>
+              <div class="post-meta mt-4">&nbsp;</div>
+              <h2 class="service-item-title">Instalação de Sistemas de Tratamento de Água</h2>
             </div>
           </div>
+        </div>
+      </div>
     </section>
 
   </main><!-- End #main -->
@@ -207,162 +328,205 @@
   
   <style>
     footer {
-    width: 100%;
-    background-color: #012241;
-    text-align: center;
-    padding: 20px 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
-  }
+      width: 100%;
+      background-color: #012241;
+      text-align: center;
+      padding: 20px 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
   
-  /* Estilos gerais do footer */
-  .footer-container {
-    background-color: #012241;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    min-height: 200px; /* Define uma altura mínima para o footer */
-  }
-  
-  .footer-container img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .footer-logos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 10px 0;
-  }
-  
-  .footer-logos img {
-    max-width: 110px;
-    height: auto;
-  }
-  
-  .footer-info p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-  
-  .footer-info a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px; 
-    padding-top: 0px;
-  }
-  
-  .footer-links img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Media Queries para Responsividade */
-  
-  /* Telas pequenas (celulares) */
-  @media (max-width: 600px) {
+    /* Estilos gerais do footer */
     .footer-container {
-      padding: 20px 15px;
+      background-color: #012241;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      min-height: 200px; /* Define uma altura mínima para o footer */
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .footer-container img {
+      max-width: 100%;
+      height: auto;
     }
   
     .footer-logos {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+  
+    .footer-logos img {
+      max-width: 110px;
+      height: auto;
     }
   
     .footer-info p {
-      font-size: 12px;
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  
+    .footer-info a {
+      color: white;
+      text-decoration: none;
     }
   
     .footer-links {
-      flex-direction: column;
-      align-items: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
     }
   
     .footer-links a {
-      font-size: 12px;
-    }
-  }
-  
-  /* Telas médias (tablets) */
-  @media (max-width: 900px) {
-    .footer-container {
-      padding: 20px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px; 
+      padding-top: 0px;
     }
   
-    .footer-logos {
-      flex-direction: row;
-      justify-content: space-around;
+    .footer-links img {
+      max-width: 100%;
+      height: auto;
     }
   
-    .footer-info p {
-      font-size: 13px;
+    /* Media Queries para Responsividade */
+  
+    /* Telas pequenas (celulares) */
+    @media (max-width: 600px) {
+      .footer-container {
+        padding: 20px 15px;
+      }
+  
+      .footer-logos {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+      }
+  
+      .footer-logos img {
+        max-width: 80px;
+      }
+  
+      .footer-info p {
+        font-size: 12px;
+      }
+  
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+  
+      .footer-links a {
+        font-size: 12px;
+      }
     }
   
-    .footer-links {
-      justify-content: center;
-    }
-  }
-  
-  /* Telas grandes (desktops) */
-  @media (min-width: 901px) {
-    .footer-container {
-      padding: 30px;
-    }
-  
-    .footer-logos {
-      justify-content: center;
-    }
-  
-    .footer-links {
-      justify-content: center;
-    }
-  }
-  
-  
-  </style>
-  <footer>
-  <div class="footer-container">
-    <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
-    <br>
-    <div class="footer-logos">
-      <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
-      <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
-      <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
-    </div>
-    <div class="footer-info">
-      <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
-      <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
-      <a href="https://www.livroreclamacoes.pt/" target="_blank">
-        <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
-      </a>
-    </div>
-    <div class="footer-links">
-      <a href="politicadeprivacidade.html">Política & Privacidade</a>
+    /* Telas muito pequenas */
+    @media (max-width: 320px) {
+      .footer-logos img {
+        max-width: 70px;
+      }
       
-      <a href="termosecondicoes.html">Termos & Condições</a>
+      .footer-info p {
+        font-size: 11px;
+      }
+      
+      .footer-container img[alt="Livro de Reclamações"] {
+        width: 120px;
+        height: auto;
+      }
+    }
+  
+    /* Telas médias (tablets) */
+    @media (min-width: 601px) and (max-width: 900px) {
+      .footer-container {
+        padding: 20px 15px;
+      }
+  
+      .footer-logos {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+  
+      .footer-info p {
+        font-size: 13px;
+      }
+  
+      .footer-links {
+        justify-content: center;
+      }
+    }
+  
+    /* Telas grandes (desktops) */
+    @media (min-width: 901px) {
+      .footer-container {
+        padding: 30px;
+      }
+  
+      .footer-logos {
+        justify-content: center;
+      }
+  
+      .footer-links {
+        justify-content: center;
+      }
+    }
+    
+    /* Telas muito grandes */
+    @media (min-width: 1600px) {
+      .footer-container {
+        max-width: 1440px;
+      }
+      
+      .footer-logos img {
+        max-width: 130px;
+      }
+      
+      .footer-info p {
+        font-size: 16px;
+      }
+      
+      .footer-links a {
+        font-size: 16px;
+      }
+    }
+  </style>
+  
+  <footer>
+    <div class="footer-container">
+      <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
+      <br>
+      <div class="footer-logos">
+        <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
+        <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
+        <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
+        <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
+        <a href="https://www.livroreclamacoes.pt/" target="_blank">
+          <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="politicadeprivacidade.html">Política & Privacidade</a>
+        <a href="termosecondicoes.html">Termos & Condições</a>
+      </div>
     </div>
-  </div>
   </footer>
   
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

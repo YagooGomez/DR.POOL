@@ -30,7 +30,201 @@
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
-
+  <style>
+    /* Responsive styles */
+    .pool-image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .pool-image {
+      width: 290px;
+      height: 290px;
+      border-radius: 50px;
+      object-fit: cover; /* Mantém a proporção e cobre o espaço */
+      display: block;
+    }
+    
+    .pool-title {
+      text-align: center;
+      font-size: 30px;
+      color: #00aad7;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+    
+    .pool-item {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      color: #00aad7;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    
+    /* Media queries for responsive design */
+    @media (max-width: 767px) {
+      .pool-image {
+        width: 250px;
+        height: 250px;
+      }
+      
+      .pool-title {
+        font-size: 24px;
+      }
+      
+      .section-title {
+        font-size: 32px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .pool-image {
+        width: 200px;
+        height: 200px;
+      }
+      
+      .pool-title {
+        font-size: 20px;
+      }
+      
+      .section-title {
+        font-size: 28px;
+      }
+    }
+    
+    @media (min-width: 1921px) {
+      .pool-image {
+        width: 350px;
+        height: 350px;
+      }
+      
+      .container-md {
+        max-width: 1800px;
+      }
+    }
+    
+    /* Header responsive fixes */
+    @media (max-width: 991px) {
+      .header .logo img {
+        max-height: 40px;
+      }
+    }
+    
+    /* Footer responsive fixes */
+    .footer-container {
+      background-color: #012241;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      min-height: 200px;
+    }
+    
+    .footer-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .footer-logos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+    
+    .footer-logos img {
+      max-width: 110px;
+      height: auto;
+    }
+    
+    .footer-info p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    
+    .footer-info a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px; 
+      padding: 5px;
+    }
+    
+    /* Media Queries para Responsividade */
+    @media (max-width: 600px) {
+      .footer-container {
+        padding: 20px 15px;
+      }
+    
+      .footer-logos {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .footer-logos img {
+        max-width: 80px;
+      }
+    
+      .footer-info p {
+        font-size: 12px;
+      }
+    
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer-links a {
+        font-size: 12px;
+      }
+    }
+    
+    @media (max-width: 900px) and (min-width: 601px) {
+      .footer-container {
+        padding: 20px 15px;
+      }
+    
+      .footer-logos {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    
+      .footer-info p {
+        font-size: 13px;
+      }
+    }
+    
+    @media (min-width: 901px) {
+      .footer-container {
+        padding: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -98,198 +292,87 @@
 
 
   <main id="main">
-     <section id="posts" class="posts" style="text-align: center;">
+     <section id="posts" class="posts">
       <div class="container-md" data-aos="fade-in">
         <div class="row">
           <div class="col-12">
             <br>
-            <p style="text-align:center; font-size:40px; color:#00aad7;"><b>PISCINAS</b></p><br><br>
-            <table style="border-collapse: separate; border-spacing: 0 20px; width:100%;">
-              <tr>
-                <td><img style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
- src="assets/img/drpool/images (2).jpg" width="290px" height="290px"><br><p style="text-align:center; font-size:30px; color:#00aad7;"><b>EXTERIORES</b></p></td>
-                <td><img style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
- src="assets/img/drpool/images (1).jpg" width="290px" height="290px"><br><p style="text-align:center; font-size:30px; color:#00aad7;"><b>INTERIORES</b></p></td>
-                <td><img style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
- src="assets/img/drpool/images (3).jpg" width="290px" height="290px"><br><p style="text-align:center; font-size:30px; color:#00aad7;"><b>SKIMMER</b></p></td>
-              </tr>
-             
-              <tr>
-                <td><img style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
- src="assets/img/drpool/images (4).jpg" width="290px" height="290px"><br><p style="text-align:center; font-size:30px; color:#00aad7;"><b>TRANSBORDO</b></p></td>
-                <td><img style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
- src="assets/img/drpool/images (5).jpg" width="290px" height="290px"><br><p style="text-align:center; font-size:30px; color:#00aad7;"><b>CALEIRA FINLANDESA</b></p></h2></td>
-                <td><img style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;"
- src="assets/img/drpool/images (6).jpg" width="290px" height="290px"><br><p style="text-align:center; font-size:30px; color:#00aad7;"><b>BARCOS</b></p></td>
-              </tr>
-            </table>
+            <h2 class="section-title">PISCINAS</h2>
+            
+            <div class="row">
+              <!-- First row -->
+              <div class="col-md-4 col-sm-6 pool-item">
+                <div class="pool-image-container">
+                  <img class="pool-image" src="assets/img/drpool/images (2).jpg" alt="EXTERIORES">
+                </div>
+                <p class="pool-title">EXTERIORES</p>
+              </div>
+              
+              <div class="col-md-4 col-sm-6 pool-item">
+                <div class="pool-image-container">
+                  <img class="pool-image" src="assets/img/drpool/images (1).jpg" alt="INTERIORES">
+                </div>
+                <p class="pool-title">INTERIORES</p>
+              </div>
+              
+              <div class="col-md-4 col-sm-6 pool-item">
+                <div class="pool-image-container">
+                  <img class="pool-image" src="assets/img/drpool/images (3).jpg" alt="SKIMMER">
+                </div>
+                <p class="pool-title">SKIMMER</p>
+              </div>
+              
+              <!-- Second row -->
+              <div class="col-md-4 col-sm-6 pool-item">
+                <div class="pool-image-container">
+                  <img class="pool-image" src="assets/img/drpool/images (4).jpg" alt="TRANSBORDO">
+                </div>
+                <p class="pool-title">TRANSBORDO</p>
+              </div>
+              
+              <div class="col-md-4 col-sm-6 pool-item">
+                <div class="pool-image-container">
+                  <img class="pool-image" src="assets/img/drpool/images (5).jpg" alt="CALEIRA FINLANDESA">
+                </div>
+                <p class="pool-title">CALEIRA FINLANDESA</p>
+              </div>
+              
+              <div class="col-md-4 col-sm-6 pool-item">
+                <div class="pool-image-container">
+                  <img class="pool-image" src="assets/img/drpool/images (6).jpg" alt="BARCOS">
+                </div>
+                <p class="pool-title">BARCOS</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-</section>
+    </section>
   </main><!-- End #main -->
 
- <!-- ======= Footer ======= -->
-  
- <style>
-  footer {
-  width: 100%;
-  background-color: #012241;
-  text-align: center;
-  padding: 20px 0;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-}
-
-/* Estilos gerais do footer */
-.footer-container {
-  background-color: #012241;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  min-height: 200px; /* Define uma altura mínima para o footer */
-}
-
-.footer-container img {
-  max-width: 100%;
-  height: auto;
-}
-
-.footer-logos {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 10px 0;
-}
-
-.footer-logos img {
-  max-width: 110px;
-  height: auto;
-}
-
-.footer-info p {
-  margin: 5px 0;
-  font-size: 14px;
-}
-
-.footer-info a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px; 
-  padding-top: 0px;
-}
-
-.footer-links img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Media Queries para Responsividade */
-
-/* Telas pequenas (celulares) */
-@media (max-width: 600px) {
-  .footer-container {
-    padding: 20px 15px;
-  }
-
-  .footer-logos {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .footer-info p {
-    font-size: 12px;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-links a {
-    font-size: 12px;
-  }
-}
-
-/* Telas médias (tablets) */
-@media (max-width: 900px) {
-  .footer-container {
-    padding: 20px 15px;
-  }
-
-  .footer-logos {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .footer-info p {
-    font-size: 13px;
-  }
-
-  .footer-links {
-    justify-content: center;
-  }
-}
-
-/* Telas grandes (desktops) */
-@media (min-width: 901px) {
-  .footer-container {
-    padding: 30px;
-  }
-
-  .footer-logos {
-    justify-content: center;
-  }
-
-  .footer-links {
-    justify-content: center;
-  }
-}
-
-
-</style>
-<footer>
-<div class="footer-container">
-  <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
-  <br>
-  <div class="footer-logos">
-    <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
-    <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
-    <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
-  </div>
-  <div class="footer-info">
-    <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
-    <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
-    <a href="https://www.livroreclamacoes.pt/" target="_blank">
-      <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
-    </a>
-  </div>
-  <div class="footer-links">
-    <a href="politicadeprivacidade.html">Política & Privacidade</a>
-    
-    <a href="termosecondicoes.html">Termos & Condições</a>
-  </div>
-</div>
-</footer>
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="footer-container">
+      <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
+      <br>
+      <div class="footer-logos">
+        <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
+        <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
+        <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
+        <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
+        <a href="https://www.livroreclamacoes.pt/" target="_blank">
+          <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="politicadeprivacidade.html">Política & Privacidade</a>
+        <a href="termosecondicoes.html">Termos & Condições</a>
+      </div>
+    </div>
+  </footer>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

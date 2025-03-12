@@ -30,7 +30,218 @@
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Responsive styles for contact page */
+    .contact-section {
+      background-image: url("assets/img/drpool/clark-tai-nq18MYhxdGs-unsplash-scaled.jpg");
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      padding: 80px 0 40px;
+      color: white;
+    }
 
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .contact-title {
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+      padding: 0 20px 30px;
+    }
+
+    .contact-form-container {
+      flex: 1;
+      min-width: 300px;
+      padding: 0 20px 30px;
+    }
+
+    .social-icons {
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: auto;
+    }
+
+    .google-maps {
+      position: relative;
+      padding-bottom: 75%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 25px;
+      margin-top: 20px;
+    }
+
+    .google-maps iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form button {
+      background-color: #012241;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form button:hover {
+      background-color: #023b6d;
+    }
+
+    /* Footer styles */
+    .footer-container {
+      background-color: #012241;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      min-height: 200px;
+    }
+    
+    .footer-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .footer-logos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+    
+    .footer-logos img {
+      max-width: 110px;
+      height: auto;
+    }
+    
+    .footer-info p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    
+    .footer-info a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px; 
+      padding-top: 0px;
+    }
+    
+    /* Media Queries for Responsiveness */
+    
+    /* Extra small devices (phones, 320px and up) */
+    @media (min-width: 320px) and (max-width: 575px) {
+      .contact-title {
+        font-size: 28px;
+      }
+      
+      .contact-info, .contact-form-container {
+        padding: 0 10px 20px;
+      }
+      
+      .social-icons img {
+        width: 24px;
+      }
+      
+      .footer-logos img {
+        max-width: 80px;
+      }
+    }
+    
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) and (max-width: 767px) {
+      .contact-title {
+        font-size: 32px;
+      }
+    }
+    
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .contact-container {
+        padding: 0 30px;
+      }
+    }
+    
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .contact-container {
+        padding: 0 40px;
+      }
+    }
+    
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) and (max-width: 2160px) {
+      .contact-container {
+        padding: 0 50px;
+      }
+    }
+    
+    /* 4K and above */
+    @media (min-width: 2161px) {
+      .contact-container {
+        max-width: 1800px;
+      }
+      
+      .contact-title {
+        font-size: 60px;
+      }
+      
+      .contact-info, .contact-form-container {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -96,266 +307,91 @@
 
   </header><!-- End Header -->
 
-
-
-  <main id="main" >
-
-    <table  width="100%" height="100%" background="assets/img/drpool/clark-tai-nq18MYhxdGs-unsplash-scaled.jpg" >
-      <tr>
-        <td colspan="2">
-          <br>
-          <p style="font-size:40px; color:white; text-align: center;"><b>CONTACTOS</b></p>
-        </td>
-       
-      </tr>
-      <tr>
-        <td style="padding-left:100px;">
-          <p style="color:white;"><b>Visite-nos</b><br><br>
+  <main id="main">
+    <!-- Contact Section - Replacing the table layout with a responsive div structure -->
+    <section class="contact-section">
+      <div class="contact-container">
+        <h1 class="contact-title">CONTACTOS</h1>
+        
+        <div class="contact-info">
+          <p><b>Visite-nos</b><br><br>
             <b>Morada:</b> Rua Monte Castelo 720-r/c-E<br>4460-055 Guifões GUIFÕES-Portugal<br><br>
             <b>Telefone:</b> 229 540 579<br>
             <b>Contacto Whatsapp:</b> +351 967 324 344<br>
             <b>Email:</b> drpool@drpool.pt</p>
-        </td>
-        <td rowspan = "3" style="padding-right:50px; padding-left: 100px;">
-       
-       <div class="form mt-5">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-             <div class="form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required><br>
-            </div>
-
-            <div class="row">
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-              </div>
-              <div class="form-group col-md-6">
-               <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required>
-              </div>
-
-            </div>
-           
-            <div class="form-group">
-               <br>
-              <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
-            </div>
-          <br>
-            <div class="text-center"><button type="submit">Enviar</button></div>
-          </form>
-           
-        </div>
-   
-        </td>
-      </tr>
-      <tr>
-        <td style="padding-left:100px;">
-          <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c"><img src="assets/img/Logotipos/Icons/FaceBook Branco.png" width="3%"></a> &nbsp;
-           <a href="https://www.instagram.com/drpool_oficial"><img src="assets/img/Logotipos/Icons/Instagram Branco.png" width="3%"></a>&nbsp;
-            <a href="https://api.whatsapp.com/send?phone=00351967324344"><img src="assets/img/Logotipos/Icons/WhatsApp Branco.png" width="3%"></a>
-        </td>
-      </tr>
-       <tr>
-        <td style="padding-left:100px;">
-          <br>
-          <style>
-            .google-maps {
-              position: relative;
-              padding-bottom: 75%;
-              height: 0;
-              overflow: hidden;
-              border-radius: 25px;
-            }
-            .google-maps iframe {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100% !important;
-              height: 100% !important;
-            }
-          </style>
+          
+          <div class="social-icons">
+            <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c"><img src="assets/img/Logotipos/Icons/FaceBook Branco.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/drpool_oficial"><img src="assets/img/Logotipos/Icons/Instagram Branco.png" alt="Instagram"></a>
+            <a href="https://api.whatsapp.com/send?phone=00351967324344"><img src="assets/img/Logotipos/Icons/WhatsApp Branco.png" alt="WhatsApp"></a>
+          </div>
           
           <div class="google-maps">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.106457697047!2d-8.67441242390533!3d41.197652571324596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2468b2656daf01%3A0x2737372a2d11c9af!2sR.%20Monte%20Castêlo%20720%2C%204460-055%20Guifões!5e0!3m2!1spt-PT!2spt!4v1741702382398!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><br><br>"
-              width="600"
-              height="450"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.106457697047!2d-8.67441242390533!3d41.197652571324596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2468b2656daf01%3A0x2737372a2d11c9af!2sR.%20Monte%20Castêlo%20720%2C%204460-055%20Guifões!5e0!3m2!1spt-PT!2spt!4v1741702382398!5m2!1spt-PT!2spt"
               style="border:0;"
               allowfullscreen=""
               loading="lazy"
-          </iframe>
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
-          <br>
-        </td>
+        </div>
+        
+        <div class="contact-form-container">
+          <div class="form mt-5">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
+              </div>
 
-
-    </table>
-
-   
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required>
+                </div>
+              </div>
+             
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+              </div>
+              <br>
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main><!-- End #main -->
 
-  <style>
-    footer {
-    width: 100%;
-    background-color: #012241;
-    text-align: center;
-    padding: 20px 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
-  }
-  
-  /* Estilos gerais do footer */
-  .footer-container {
-    background-color: #012241;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    min-height: 200px; /* Define uma altura mínima para o footer */
-  }
-  
-  .footer-container img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .footer-logos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 10px 0;
-  }
-  
-  .footer-logos img {
-    max-width: 110px;
-    height: auto;
-  }
-  
-  .footer-info p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-  
-  .footer-info a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px; 
-    padding-top: 0px;
-  }
-  
-  .footer-links img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Media Queries para Responsividade */
-  
-  /* Telas pequenas (celulares) */
-  @media (max-width: 600px) {
-    .footer-container {
-      padding: 20px 15px;
-    }
-  
-    .footer-logos {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-    }
-  
-    .footer-info p {
-      font-size: 12px;
-    }
-  
-    .footer-links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-links a {
-      font-size: 12px;
-    }
-  }
-  
-  /* Telas médias (tablets) */
-  @media (max-width: 900px) {
-    .footer-container {
-      padding: 20px 15px;
-    }
-  
-    .footer-logos {
-      flex-direction: row;
-      justify-content: space-around;
-    }
-  
-    .footer-info p {
-      font-size: 13px;
-    }
-  
-    .footer-links {
-      justify-content: center;
-    }
-  }
-  
-  /* Telas grandes (desktops) */
-  @media (min-width: 901px) {
-    .footer-container {
-      padding: 30px;
-    }
-  
-    .footer-logos {
-      justify-content: center;
-    }
-  
-    .footer-links {
-      justify-content: center;
-    }
-  }
-  
-  
-  </style>
   <footer>
-  <div class="footer-container">
-    <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
-    <br>
-    <div class="footer-logos">
-      <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
-      <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
-      <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+    <div class="footer-container">
+      <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
+      <br>
+      <div class="footer-logos">
+        <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
+        <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
+        <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
+        <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
+        <a href="https://www.livroreclamacoes.pt/" target="_blank">
+          <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="politicadeprivacidade.html">Política & Privacidade</a>
+        <a href="termosecondicoes.html">Termos & Condições</a>
+      </div>
     </div>
-    <div class="footer-info">
-      <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
-      <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
-      <a href="https://www.livroreclamacoes.pt/" target="_blank">
-        <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
-      </a>
-    </div>
-    <div class="footer-links">
-      <a href="politicadeprivacidade.html">Política & Privacidade</a>
-      
-      <a href="termosecondicoes.html">Termos & Condições</a>
-    </div>
-  </div>
   </footer>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -367,3 +403,4 @@
 </body>
 
 </html>
+

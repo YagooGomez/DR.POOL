@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
   <meta charset="utf-8">
@@ -30,7 +30,225 @@
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Estilos responsivos adicionais */
+    body {
+      overflow-x: hidden;
+    }
 
+    .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Ajustes para o cabeçalho */
+    #header {
+      padding: 15px 0;
+    }
+
+    @media (max-width: 768px) {
+      #header .logo img {
+        max-width: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #header .logo img {
+        max-width: 120px;
+      }
+    }
+
+    /* Ajustes para o conteúdo principal */
+    .quem-somos-content {
+      padding: 80px 15px 40px;
+    }
+
+    .quem-somos-title {
+      text-align: center;
+      font-size: 40px;
+      color: #00aad7;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .quem-somos-text {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .quem-somos-image {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    /* Ajustes responsivos para o conteúdo */
+    @media (max-width: 1200px) {
+      .quem-somos-title {
+        font-size: 36px;
+      }
+      .quem-somos-text {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .quem-somos-title {
+        font-size: 32px;
+      }
+      .quem-somos-text {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .quem-somos-content {
+        padding: 70px 15px 30px;
+      }
+      .quem-somos-title {
+        font-size: 28px;
+      }
+      .quem-somos-text {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .quem-somos-content {
+        padding: 60px 15px 20px;
+      }
+      .quem-somos-title {
+        font-size: 24px;
+      }
+      .quem-somos-text {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .quem-somos-title {
+        font-size: 22px;
+      }
+      .quem-somos-text {
+        font-size: 13px;
+      }
+    }
+
+    /* Ajustes para telas muito grandes */
+    @media (min-width: 1921px) {
+      .container-md {
+        max-width: 1600px;
+      }
+      .quem-somos-title {
+        font-size: 48px;
+      }
+      .quem-somos-text {
+        font-size: 22px;
+      }
+    }
+
+    /* Ajustes para o footer */
+    .footer-container {
+      background-color: #012241;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      min-height: 200px;
+      width: 100%;
+    }
+    
+    .footer-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .footer-logos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+    
+    .footer-logos img {
+      max-width: 110px;
+      height: auto;
+    }
+    
+    .footer-info p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    
+    .footer-info a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px; 
+      padding: 5px;
+    }
+    
+    .footer-links img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Media Queries para Responsividade */
+    @media (max-width: 600px) {
+      .footer-container {
+        padding: 20px 10px;
+      }
+    
+      .footer-logos {
+        gap: 10px;
+      }
+      
+      .footer-logos img {
+        max-width: 80px;
+      }
+    
+      .footer-info p {
+        font-size: 12px;
+      }
+    
+      .footer-links {
+        gap: 10px;
+      }
+    
+      .footer-links a {
+        font-size: 12px;
+      }
+    }
+    
+    @media (max-width: 320px) {
+      .footer-logos img {
+        max-width: 70px;
+      }
+      
+      .footer-info p {
+        font-size: 11px;
+      }
+      
+      .footer-links a {
+        font-size: 11px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -45,7 +263,7 @@
         
       </a>
 
-   <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html">INICIO</a></li>
           <li><a href="quem_somos.html">QUEM SOMOS</a></li>
@@ -71,6 +289,7 @@
           <li><a href="contactos.html">CONTACTOS</a></li>
         </ul>
       </nav><!-- .navbar -->
+      
       <div class="position-relative">
 
         <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c" class="mx-2"><img width="30" height="30" src="assets/img/drpool/fbIcon.png"></a>
@@ -95,194 +314,52 @@
 
   </header><!-- End Header -->
 
-
-
   <main id="main">
+    <div class="quem-somos-content">
       <div class="container-md" data-aos="fade-in">
         <div class="row">
           <div class="col-12">
-            <br>
-            <p style="text-align:center; font-size:40px; color:#00aad7;"><b>QUEM SOMOS</b>
-            <p style="text-align:justify; font-size:20px; text-justify: inter-word;">Fundada em 2011, a dr pool® é uma empresa especializada em construção e reparação e manutenção de piscinas. Com mais de 12 anos de experiência, profissionais qualificados e um Know-how invejável, a dr pool® atua no mercado empresarial na construção, reparação, manutenção de piscinas bem como na limpeza e tratamento de água de piscinas.
-
-            Oferecemos soluções capazes de dar respostas eficazes na área da gestão de qualidade, através de intervenções 360º, corrigindo avarias desde a parte mecânica, tubagens, qualidade da água (pH, cloro e físico-química), acessórios e prestando relatórios através de diagnósticos desenvolvidos. Ao abrigo das normas da Direção Geral de Saúde (D.G.S.), atuamos de forma corretiva e preventiva na resolução dos problemas do mercado público e privado, otimizando recursos, proporcionado segurança, confiança e qualidade e garantindo a satisfação do nosso cliente.
-            </p>
-            <p style="text-align:left"><b>Reparamos a sua Piscina – Sempre com Garantia</b></p>
-                 <img src="assets/img/drpool/piscinaQuemSomos.jpeg" width= 100% height=33%></p>
+            <h1 class="quem-somos-title">QUEM SOMOS</h1>
+            <p class="quem-somos-text">Fundada em 2011, a dr pool® é uma empresa especializada em construção e reparação e manutenção de piscinas. Com mais de 12 anos de experiência, profissionais qualificados e um Know-how invejável, a dr pool® atua no mercado empresarial na construção, reparação, manutenção de piscinas bem como na limpeza e tratamento de água de piscinas.</p>
+            
+            <p class="quem-somos-text">Oferecemos soluções capazes de dar respostas eficazes na área da gestão de qualidade, através de intervenções 360º, corrigindo avarias desde a parte mecânica, tubagens, qualidade da água (pH, cloro e físico-química), acessórios e prestando relatórios através de diagnósticos desenvolvidos. Ao abrigo das normas da Direção Geral de Saúde (D.G.S.), atuamos de forma corretiva e preventiva na resolução dos problemas do mercado público e privado, otimizando recursos, proporcionado segurança, confiança e qualidade e garantindo a satisfação do nosso cliente.</p>
+            
+            <p style="text-align:left; font-weight:bold; font-size:18px; margin-top:20px; margin-bottom:15px;">Reparamos a sua Piscina – Sempre com Garantia</p>
+            <img src="assets/img/drpool/piscinaQuemSomos.jpeg" class="quem-somos-image" alt="Piscina Dr Pool">
           </div>
         </div>
       </div>
-<br>
-<br>
-<br>
-<br>
+    </div>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  
-  <style>
-    footer {
-    width: 100%;
-    background-color: #012241;
-    text-align: center;
-    padding: 20px 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
-  }
-  
-  /* Estilos gerais do footer */
-  .footer-container {
-    background-color: #012241;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    min-height: 200px; /* Define uma altura mínima para o footer */
-  }
-  
-  .footer-container img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .footer-logos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 10px 0;
-  }
-  
-  .footer-logos img {
-    max-width: 110px;
-    height: auto;
-  }
-  
-  .footer-info p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-  
-  .footer-info a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px; 
-    padding-top: 0px;
-  }
-  
-  .footer-links img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Media Queries para Responsividade */
-  
-  /* Telas pequenas (celulares) */
-  @media (max-width: 600px) {
-    .footer-container {
-      padding: 20px 15px;
-    }
-  
-    .footer-logos {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-    }
-  
-    .footer-info p {
-      font-size: 12px;
-    }
-  
-    .footer-links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-links a {
-      font-size: 12px;
-    }
-  }
-  
-  /* Telas médias (tablets) */
-  @media (max-width: 900px) {
-    .footer-container {
-      padding: 20px 15px;
-    }
-  
-    .footer-logos {
-      flex-direction: row;
-      justify-content: space-around;
-    }
-  
-    .footer-info p {
-      font-size: 13px;
-    }
-  
-    .footer-links {
-      justify-content: center;
-    }
-  }
-  
-  /* Telas grandes (desktops) */
-  @media (min-width: 901px) {
-    .footer-container {
-      padding: 30px;
-    }
-  
-    .footer-logos {
-      justify-content: center;
-    }
-  
-    .footer-links {
-      justify-content: center;
-    }
-  }
-  
-  
-  </style>
   <footer>
-  <div class="footer-container">
-    <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
-    <br>
-    <div class="footer-logos">
-      <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
-      <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
-      <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+    <div class="footer-container">
+      <img src="assets/img/Logotipos/drpoolLogotipo.png" width="150" height="37" alt="Dr.pool">
+      <br>
+      <div class="footer-logos">
+        <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
+        <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
+        <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
+        <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
+        <a href="https://www.livroreclamacoes.pt/" target="_blank">
+          <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="politicadeprivacidade.html">Política & Privacidade</a>
+        <a href="termosecondicoes.html">Termos & Condições</a>
+      </div>
     </div>
-    <div class="footer-info">
-      <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
-      <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
-      <a href="https://www.livroreclamacoes.pt/" target="_blank">
-        <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
-      </a>
-    </div>
-    <div class="footer-links">
-      <a href="politicadeprivacidade.html">Política & Privacidade</a>
-      
-      <a href="termosecondicoes.html">Termos & Condições</a>
-    </div>
-  </div>
   </footer>
   
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -291,7 +368,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
+
