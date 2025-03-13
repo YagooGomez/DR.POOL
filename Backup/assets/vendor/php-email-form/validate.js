@@ -1,35 +1,56 @@
-/**
- * PHP Email Form Validation - v3.6
- * URL: https://bootstrapmade.com/php-email-form/
- * Author: BootstrapMade.com
- */
-;(() => {
-  // Esta versão modificada do script não interfere com o reCAPTCHA v3
-  // O processamento do formulário é feito pelo script personalizado no HTML
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#contact-form")
 
-  const forms = document.querySelectorAll(".php-email-form")
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault()
 
-  forms.forEach((form) => {
-    // Adiciona os elementos de feedback se não existirem
-    if (!form.querySelector(".loading")) {
-      const loading = document.createElement("div")
-      loading.classList.add("loading")
-      loading.textContent = "Carregando..."
-      form.appendChild(loading)
-    }
+    const loadingElement = form.querySelector(".loading")
+    const errorElement = form.querySelector(".error-message")
+    const successElement = form.querySelector(".sent-message")
 
-    if (!form.querySelector(".error-message")) {
-      const errorMessage = document.createElement("div")
-      errorMessage.classList.add("error-message")
-      form.appendChild(errorMessage)
-    }
+    // Limpa mensagens anteriores
+    errorElement.style.display = "none"
+    successElement.style.display = "none"
 
-    if (!form.querySelector(".sent-message")) {
-      const sentMessage = document.createElement("div")
-      sentMessage.classList.add("sent-message")
-      sentMessage.textContent = "Sua mensagem foi enviada. Obrigado!"
-      form.appendChild(sentMessage)
+    // Ativa o loading
+    loadingElement.style.display = "block"
+
+    // Captura dados do formulário
+    const formData = new FormData(form)
+
+    // Obtém o token do reCAPTCHA v3
+    const recaptchaToken = await grecaptcha.execute('6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs', { action: 'submit' })
+    formData.append('recaptcha_response', recaptchaToken)
+
+    // Envia os dados via AJAX
+    try {
+      const response = await fetch('contactos.php', {
+        method: 'POST',
+        body: formData
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        successElement.textContent = result.message
+        successElement.style.display = "block"
+        form.reset()
+      } else {
+        errorElement.textContent = result.message
+        errorElement.style.display = "block"
+      }
+    } catch (error) {
+      errorElement.textContent = "Erro ao enviar o formulário. Tente novamente mais tarde."
+      errorElement.style.display = "block"
+    } finally {
+      loadingElement.style.display = "none"
     }
   })
-})()
+})
 
+grecaptcha.ready(function() {
+  grecaptcha.execute('6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs', { action: 'submit' }).then(function(token) {
+    document.getElementById('recaptchaResponse').value = token;
+    console.log('reCAPTCHA Token:', token);
+  });
+});
