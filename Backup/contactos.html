@@ -68,6 +68,7 @@
       flex: 1;
       min-width: 300px;
       padding: 0 20px 30px;
+      margin-top: 175px;
     }
 
     .social-icons {
@@ -178,6 +179,9 @@
       padding-top: 0px;
     }
     
+    .contact-form-container h2 {
+      text-align: center;
+    }
     /* Media Queries for Responsiveness */
     
     /* Extra small devices (phones, 320px and up) */
@@ -186,8 +190,13 @@
         font-size: 28px;
       }
       
-      .contact-info, .contact-form-container {
+      .contact-info {
         padding: 0 10px 20px;
+      }
+
+      .contact-form-container{
+        margin-right: auto;
+        align-items: center;
       }
       
       .social-icons img {
@@ -241,6 +250,7 @@
         font-size: 18px;
       }
     }
+    
   </style>
 </head>
 
@@ -338,6 +348,7 @@
         </div>
         
         <div class="contact-form-container">
+          <h2>FALE CONNOSCO</h2>
           <div class="form mt-5">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
