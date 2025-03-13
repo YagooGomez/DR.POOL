@@ -1,41 +1,97 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+// Database connection parameters
+$servername = "localhost";
+$username = "DR.POOL"; // Replace with your database username
+$password = "DRPOOL54321"; // Replace with your database password
+$dbname = "drpool";
+$table = "contatos";
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+// Initialize response array
+$response = [
+    'success' => false,
+    'message' => ''
+];
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+// Check if form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Validate reCAPTCHA
+    $recaptcha_response = $_POST['recaptcha_response'];
+    $recaptcha_secret = '6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs'; // Replace with your actual secret key
+    
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_data = [
+        'secret' => $recaptcha_secret,
+        'response' => $recaptcha_response,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    ];
+    
+    $recaptcha_options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($recaptcha_data)
+        ]
+    ];
+    
+    $recaptcha_context = stream_context_create($recaptcha_options);
+    $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+    $recaptcha_json = json_decode($recaptcha_result);
+    
+    // If reCAPTCHA verification failed
+    if (!$recaptcha_json->success || $recaptcha_json->score < 0.5) {
+        $response['message'] = 'Falha na verificação do reCAPTCHA. Por favor, tente novamente.';
+        echo json_encode($response);
+        exit;
+    }
+    
+    // Get form data
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+    $date = date('Y-m-d H:i:s');
+    
+    // Validate required fields
+    if (empty($name) || empty($email) || empty($telefone) || empty($message)) {
+        $response['message'] = 'Por favor, preencha todos os campos obrigatórios.';
+        echo json_encode($response);
+        exit;
+    }
+    
+    // Connect to database
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        // Prepare SQL statement
+        $stmt = $conn->prepare("INSERT INTO $table (nome, email, telefone, mensagem, data_envio) 
+                               VALUES (:nome, :email, :telefone, :mensagem, :data_envio)");
+        
+        // Bind parameters
+        $stmt->bindParam(':nome', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':telefone', $telefone);
+        $stmt->bindParam(':mensagem', $message);
+        $stmt->bindParam(':data_envio', $date);
+        
+        // Execute query
+        $stmt->execute();
+        
+        // Send success response
+        $response['success'] = true;
+        $response['message'] = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+    } catch(PDOException $e) {
+        $response['message'] = 'Erro ao salvar os dados: ' . $e->getMessage();
+    }
+    
+    // Close connection
+    $conn = null;
+} else {
+    $response['message'] = 'Método de requisição inválido.';
+}
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+// Return JSON response
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>
+

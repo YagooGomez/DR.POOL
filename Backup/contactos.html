@@ -30,6 +30,9 @@
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs"></script>
+
   <style>
     /* Responsive styles for contact page */
     .contact-section {
@@ -251,6 +254,48 @@
       }
     }
     
+    /* Adicione um indicador visual para o reCAPTCHA */
+    .recaptcha-info {
+      text-align: center;
+      font-size: 12px;
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+    
+    .recaptcha-info img {
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .loading, .error-message, .sent-message {
+      display: none;
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .loading {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #012241;
+    }
+
+    .error-message {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .sent-message {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .d-block {
+      display: block !important;
+    }
   </style>
 </head>
 
@@ -299,9 +344,17 @@
        <!-- <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
         <a href="#" class="mx-2"><span class="bi-instagram"></span></a> -->
 
-        <a href="https://www.instagram.com/drpool_oficial" class="mx-2"><img width="30" height="30" src="assets/img/Logotipos/Icons/Instagram Azul.png"></a>
+        <a href="#" class="mx-2 js-search-open"><img width="30" height="30" src="assets/img/drpool/searchIcon.png"></a>
         <i class="bi bi-list mobile-nav-toggle"></i>
-        
+
+        <!-- ======= Search Form ======= -->
+        <div class="search-form-wrap js-search-form-wrap">
+          <form action="search-result.html" class="search-form">
+            <span class="icon bi-search"></span>
+            <input type="text" placeholder="Search" class="form-control">
+            <button class="btn js-search-close"><span class="bi-x"></span></button>
+          </form>
+        </div><!-- End Search Form -->
 
       </div>
 
@@ -320,7 +373,7 @@
             <b>Morada:</b> Rua Monte Castelo 720-r/c-E<br>4460-055 Guifões GUIFÕES-Portugal<br><br>
             <b>Telefone:</b> 229 540 579<br>
             <b>Contacto Whatsapp:</b> +351 967 324 344<br>
-            <b>Email:</b> drpool@drpool.pt</p>
+            <b>Email:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6602141609090a2602141609090a481612">[email&#160;protected]</a></p>
           
           <div class="social-icons">
             <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c"><img src="assets/img/Logotipos/Icons/FaceBook Branco.png" alt="Facebook"></a>
@@ -342,7 +395,7 @@
         <div class="contact-form-container">
           <h2>FALE CONNOSCO</h2>
           <div class="form mt-5">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form" id="contact-form">
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
               </div>
@@ -360,7 +413,22 @@
                 <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
               </div>
               <br>
-              <div class="text-center"><button type="submit">Enviar</button></div>
+              
+              <!-- Indicador visual do reCAPTCHA -->
+              <div class="recaptcha-info">
+                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+                Este site é protegido pelo reCAPTCHA e a Política de Privacidade e Termos de Serviço do Google se aplicam.
+              </div>
+              
+              <!-- Campo oculto para o token do reCAPTCHA v3 -->
+              <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+              
+              <div class="text-center">
+                <button type="submit" id="submit-btn">Enviar</button>
+              </div>
+              <div class="loading">Enviando...</div>
+              <div class="error-message"></div>
+              <div class="sent-message"></div>
             </form>
           </div>
         </div>
@@ -379,7 +447,7 @@
       </div>
       <div class="footer-info">
         <p>&copy; 2025 Todos os direitos reservados, Desenvolvido por 360Elite TGEI</p>
-        <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
+        <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="/cdn-cgi/l/email-protection#543026243b3b38143026243b3b387a2420" style="color: white; text-decoration: underline;"><span class="__cf_email__" data-cfemail="1b7f696b7474775b7f696b747477356b6f">[email&#160;protected]</span></a></p>
         <a href="https://www.livroreclamacoes.pt/" target="_blank">
           <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" width="150" height="75" alt="Livro de Reclamações">
         </a>
@@ -394,7 +462,7 @@
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -402,6 +470,89 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Script para o reCAPTCHA v3 -->
+  <script>
+    // Função para lidar com o envio do formulário
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Mostrar indicador de carregamento
+      document.querySelector('.loading').classList.add('d-block');
+      document.querySelector('.error-message').classList.remove('d-block');
+      document.querySelector('.sent-message').classList.remove('d-block');
+      
+      // Desativar o botão de envio para evitar múltiplos envios
+      document.getElementById('submit-btn').disabled = true;
+      
+      // Executar o reCAPTCHA
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs', {action: 'submit'})
+          .then(function(token) {
+            // Adicionar o token ao campo oculto
+            document.getElementById('recaptchaResponse').value = token;
+            
+            // Obter os dados do formulário
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+            
+            // Enviar os dados via fetch
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {'X-Requested-With': 'XMLHttpRequest'}
+            })
+            .then(response => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error(`Erro ${response.status}: ${response.statusText}`);
+              }
+            })
+            .then(data => {
+              // Ocultar indicador de carregamento
+              document.querySelector('.loading').classList.remove('d-block');
+              document.getElementById('submit-btn').disabled = false;
+              
+              if (data.success) {
+                // Mostrar mensagem de sucesso
+                document.querySelector('.sent-message').innerHTML = data.message || 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+                document.querySelector('.sent-message').classList.add('d-block');
+                form.reset();
+              
+                // Rolar para a mensagem de sucesso
+                document.querySelector('.sent-message').scrollIntoView({ behavior: 'smooth' });
+              } else {
+                // Mostrar mensagem de erro
+                throw new Error(data.message || 'Ocorreu um erro ao enviar o formulário.');
+              }
+            })
+            .catch(error => {
+              // Ocultar indicador de carregamento e mostrar erro
+              document.querySelector('.loading').classList.remove('d-block');
+              document.querySelector('.error-message').innerHTML = error.message;
+              document.querySelector('.error-message').classList.add('d-block');
+              document.getElementById('submit-btn').disabled = false;
+              
+              // Rolar para a mensagem de erro
+              document.querySelector('.error-message').scrollIntoView({ behavior: 'smooth' });
+            });
+          });
+      });
+    }
+
+    // Adicionar o evento de envio do formulário quando o DOM estiver carregado
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+    a
+      // Remover qualquer manipulador de eventos existente
+      const newForm = form.cloneNode(true);
+      form.parentNode.replaceChild(newForm, form);
+    
+      // Adicionar o novo manipulador de eventos
+      newForm.addEventListener('submit', handleFormSubmit);
+    });
+  </script>
 
 </body>
 
