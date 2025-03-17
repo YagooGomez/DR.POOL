@@ -31,7 +31,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- reCAPTCHA v3 -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfGTfUqAAAAAK5rClY2Dz5ezrmi3eZN9kvrR0Ms"></script>
 
   <style>
     /* Responsive styles for contact page */
@@ -490,7 +490,7 @@
       
       // Executar o reCAPTCHA
       grecaptcha.ready(function() {
-        grecaptcha.execute('6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs', {action: 'submit'})
+        grecaptcha.execute('6LfGTfUqAAAAAK5rClY2Dz5ezrmi3eZN9kvrR0Ms', {action: 'submit'})
           .then(function(token) {
             // Adicionar o token ao campo oculto
             document.getElementById('recaptchaResponse').value = token;
@@ -547,7 +547,7 @@
     // Adicionar o evento de envio do formulário quando o DOM estiver carregado
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.getElementById('contact-form');
-    a
+    
       // Remover qualquer manipulador de eventos existente
       const newForm = form.cloneNode(true);
       form.parentNode.replaceChild(newForm, form);

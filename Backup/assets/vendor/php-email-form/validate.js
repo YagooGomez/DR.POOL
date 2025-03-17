@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form)
 
     // Obtém o token do reCAPTCHA v3
-    const recaptchaToken = await grecaptcha.execute('6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs', { action: 'submit' })
+    const recaptchaToken = await grecaptcha.execute('6LfGTfUqAAAAAK5rClY2Dz5ezrmi3eZN9kvrR0Ms', { action: 'submit' })
     formData.append('recaptcha_response', recaptchaToken)
 
     // Envia os dados via AJAX
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 grecaptcha.ready(function() {
-  grecaptcha.execute('6LdtifMqAAAAAHwp410W99DoQQtIKozSxxdIH9gs', { action: 'submit' }).then(function(token) {
+  grecaptcha.execute('6LfGTfUqAAAAAK5rClY2Dz5ezrmi3eZN9kvrR0Ms', { action: 'submit' }).then(function(token) {
     document.getElementById('recaptchaResponse').value = token;
     console.log('reCAPTCHA Token:', token);
   });
