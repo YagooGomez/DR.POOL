@@ -30,6 +30,7 @@
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfGTfUqAAAAAK5rClY2Dz5ezrmi3eZN9kvrR0Ms"></script>
 
 </head>
 
@@ -218,6 +219,7 @@
         </div>
         <br><br><br><br>
         <h2 style="color:#ffffff;">ENTRE EM CONTACTO CONNOSCO!!</h2>
+        <div class="contact-form-container">
         <div class="form mt-5">
           <form action="forms/contact.php" method="post" role="form" class="php-email-form" id="contact-form">
             <div class="form-group">
@@ -241,7 +243,7 @@
             <!-- Indicador visual do reCAPTCHA -->
             <div class="recaptcha-info">
               <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
-              Este site é protegido pelo reCAPTCHA e a Política de Privacidade e Termos de Serviço do Google se aplicam.
+              <p style="color:#000000;">Este site é protegido pelo reCAPTCHA e a Política de Privacidade e Termos de Serviço do Google se aplicam.</p>
             </div>
       
             <!-- Campo oculto para o token do reCAPTCHA v3 -->
@@ -250,12 +252,14 @@
             <div class="text-center">
               <button type="submit" id="submit-btn">Enviar</button>
             </div>
+            <br>
             <div class="loading">Enviando...</div>
             <div class="error-message"></div>
             <div class="sent-message"></div>
           </form>
         </div>
       </div>
+    </div>
     </div>
 
     </section>
@@ -434,6 +438,88 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Função para lidar com o envio do formulário
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Mostrar indicador de carregamento
+      document.querySelector('.loading').classList.add('d-block');
+      document.querySelector('.error-message').classList.remove('d-block');
+      document.querySelector('.sent-message').classList.remove('d-block');
+      
+      // Desativar o botão de envio para evitar múltiplos envios
+      document.getElementById('submit-btn').disabled = true;
+      
+      // Executar o reCAPTCHA
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LfGTfUqAAAAAK5rClY2Dz5ezrmi3eZN9kvrR0Ms', {action: 'submit'})
+          .then(function(token) {
+            // Adicionar o token ao campo oculto
+            document.getElementById('recaptchaResponse').value = token;
+            
+            // Obter os dados do formulário
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+            
+            // Enviar os dados via fetch
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {'X-Requested-With': 'XMLHttpRequest'}
+            })
+            .then(response => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error(`Erro ${response.status}: ${response.statusText}`);
+              }
+            })
+            .then(data => {
+              // Ocultar indicador de carregamento
+              document.querySelector('.loading').classList.remove('d-block');
+              document.getElementById('submit-btn').disabled = false;
+              
+              if (data.success) {
+                // Mostrar mensagem de sucesso
+                document.querySelector('.sent-message').innerHTML = data.message || 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+                document.querySelector('.sent-message').classList.add('d-block');
+                form.reset();
+              
+                // Rolar para a mensagem de sucesso
+                document.querySelector('.sent-message').scrollIntoView({ behavior: 'smooth' });
+              } else {
+                // Mostrar mensagem de erro
+                throw new Error(data.message || 'Ocorreu um erro ao enviar o formulário.');
+              }
+            })
+            .catch(error => {
+              // Ocultar indicador de carregamento e mostrar erro
+              document.querySelector('.loading').classList.remove('d-block');
+              document.querySelector('.error-message').innerHTML = error.message;
+              document.querySelector('.error-message').classList.add('d-block');
+              document.getElementById('submit-btn').disabled = false;
+              
+              // Rolar para a mensagem de erro
+              document.querySelector('.error-message').scrollIntoView({ behavior: 'smooth' });
+            });
+          });
+      });
+    }
+
+    // Adicionar o evento de envio do formulário quando o DOM estiver carregado
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+    
+      // Remover qualquer manipulador de eventos existente
+      const newForm = form.cloneNode(true);
+      form.parentNode.replaceChild(newForm, form);
+    
+      // Adicionar o novo manipulador de eventos
+      newForm.addEventListener('submit', handleFormSubmit);
+    });
+  </script>
 
 </body>
 
