@@ -219,29 +219,40 @@
         <br><br><br><br>
         <h2 style="color:#ffffff;">ENTRE EM CONTACTO CONNOSCO!!</h2>
         <div class="form mt-5">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-             <div class="form-group">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form" id="contact-form">
+            <div class="form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
             </div>
-
+      
             <div class="row">
               <div class="form-group col-md-6">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
               </div>
               <div class="form-group col-md-6">
-               <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required>
+                <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required>
               </div>
             </div>
-           
+      
             <div class="form-group">
               <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
             </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">A sua mensagem foi enviada. Obrigado!</div>
+            <br>
+      
+            <!-- Indicador visual do reCAPTCHA -->
+            <div class="recaptcha-info">
+              <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+              Este site é protegido pelo reCAPTCHA e a Política de Privacidade e Termos de Serviço do Google se aplicam.
             </div>
-            <div class="text-center"><button type="submit">Enviar</button></div>
+      
+            <!-- Campo oculto para o token do reCAPTCHA v3 -->
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+      
+            <div class="text-center">
+              <button type="submit" id="submit-btn">Enviar</button>
+            </div>
+            <div class="loading">Enviando...</div>
+            <div class="error-message"></div>
+            <div class="sent-message"></div>
           </form>
         </div>
       </div>
