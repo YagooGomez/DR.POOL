@@ -1,0 +1,7 @@
+#.env
+
+# Credenciais de Email
+SMTP_HOST=smtp-pt.securemail.pro
+SMTP_USERNAME=financeiro@drpool.pt
+SMTP_PASSWORD="DRPOOL_21*DGF"
+SMTP_PORT=587

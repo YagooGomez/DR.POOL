@@ -6,8 +6,15 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  min-height: 100vh; /* Garante que o mínimo é a altura da viewport /
+  height: auto; / Permite que o HTML e o body cresçam conforme necessário /
+  overflow-x: hidden; / Evita barras de rolagem laterais desnecessárias */
+}
+
 body {
   color: rgba(var(--color-primary-rgb), 1);
+  max-width: 100%;
 }
 
 a {
@@ -19,7 +26,7 @@ a:hover {
   color: var(--color-links-hover);
   text-decoration: none;
 }
-.antispam { display:none;}
+
 h1,
 h2,
 h3,
@@ -32,6 +39,8 @@ h6 {
 #main {
   margin-top: 90px;
 }
+
+
 
 /*--------------------------------------------------------------
 # Sections & Section Header
@@ -67,7 +76,7 @@ section {
   background: var(--color-primary);
   width: 40px;
   height: 40px;
-  border-radius: 4px;
+/*  border-radius: 4px;*/
   transition: all 0.4s;
 }
 
@@ -255,7 +264,7 @@ section {
     background: var(--color-primary);
     padding: 8px 20px;
     margin-left: 30px;
-    border-radius: 4px;
+ /*   border-radius: 4px;*/
     color: var(--color-white);
   }
 
@@ -278,7 +287,7 @@ section {
     background: var(--color-white);
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.3s;
-    border-radius: 4px;
+   /* border-radius: 4px;*/
 
   }
 
@@ -325,6 +334,8 @@ section {
   }
 }
 
+
+
 @media (min-width: 1280px) and (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -354,7 +365,7 @@ section {
     inset: 55px 15px 15px 15px;
     padding: 10px 0;
     margin: 0;
-    border-radius: 10px;
+   /* border-radius: 10px; */
     background-color: var(--color-white);
     overflow-y: auto;
     transition: 0.3s;
@@ -483,65 +494,6 @@ section {
 }
 
 @media (max-width: 768px) {
-  .cbox_news{
-    display: inline;
-  }
-  .main-container h1{
-    padding-top: 30px;
-  }
-  .map{
-    text-align: center;
-  }
-  .map img {
-    max-width: 300px;
-  }
-  .left-container{
-    padding: 20px;
-    width: 100% !important;
-  }
-  .right-container{
-    width: 100% !important;
-  }
-  .main-container{
-    padding: 30px 0 70px 0 !important;
-    background-image: none !important;
-    background-color: #00aad7 !important  ;
-  }
-  .change-t{
-    font-size: 20px !important;
-    text-align: center;
-  }
-  .thumbnail img{
-    max-width: 100%;
-  }
-  .container-md{
-    padding-bottom: 130px;
-  }
-  .change-txt-{
-    margin: 10px;
-  }
-  .adj-w{
-    max-height: 15%;
-  }
-  #posts{
-    text-align: center;
-  }
-
-  #posts .table-partener .row div:first-of-type{
-    margin-top: 20px;
-  }
-
-  #posts .table-partener .row div{
-    margin-bottom: 20px;
-  }
-  .t-c{
-    display: none;
-  }
-  
-  footer table{
-    max-width: 10px;
-  }
-
   .custom-border {
     border: none !important;
   }
@@ -553,7 +505,7 @@ section {
 
 .author .photo img {
   width: 40px;
-  border-radius: 50%;
+ /* border-radius: 50%; */
   margin-bottom: 0;
 }
 
@@ -688,12 +640,6 @@ section {
 @media (max-width: 768px) {
   .img-bg {
     height: 400px;
-  }
-  .input-txt:not(:first-of-type){
-    margin: 20px 0 0 0!important;
-  }
-  form .sub-but{
-    margin: 30px 0 0 0;
   }
 }
 
@@ -868,7 +814,7 @@ section {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border-radius: 50%;
+ /* border-radius: 50%; */
   font-family: var(--font-secondary);
   margin: 5px;
   transition: 0.3s all ease;
@@ -890,7 +836,7 @@ section {
 .custom-pagination a.prev,
 .custom-pagination a.next {
   width: auto !important;
-  border-radius: 4px;
+ /* border-radius: 4px;*/
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -915,7 +861,7 @@ section {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
-  border-radius: 0;
+/*  border-radius: 0; */
   padding-left: 0;
   padding-right: 0;
   margin-right: 20px;
@@ -940,7 +886,7 @@ section {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  border-radius: 50%;
+ /* border-radius: 50%;*/
   text-align: center;
   display: inline-block;
   background-color: rgba(var(--color-black-rgb), 0.2);
@@ -985,7 +931,9 @@ section {
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
-
+.comment {
+  /* Font not working in <textarea> for this version of bs */
+}
 
 .comment .avatar {
   position: relative;
@@ -999,7 +947,7 @@ section {
 .comment .avatar-placeholder {
   width: 100%;
   height: 100%;
-  border-radius: inherit;
+ /* border-radius: inherit;*/
 }
 
 .comment .avatar-img {
@@ -1035,7 +983,7 @@ section {
   height: 20%;
   display: block;
   background-color: rgba(var(--color-black-rgba), 0.1);
-  border-radius: 50%;
+ /* border-radius: 50%;*/
 }
 
 .comment .avatar-group {
@@ -1156,15 +1104,12 @@ section {
     border-right: 1px solid rgba(var(--color-secondary-rgb), 0.2);
   }
 }
-.php-email-form{
-  box-shadow: 0 0 30px rgba(var(--color-black-rgb), 0.1);
-  padding: 30px;
-  background: var(--color-white); 
-}
+
 .contact .php-email-form {
   box-shadow: 0 0 30px rgba(var(--color-black-rgb), 0.1);
   padding: 30px;
   background: var(--color-white);
+ /* border-radius: 15px;*/
 }
 
 @media (max-width: 640px) {
@@ -1181,20 +1126,11 @@ section {
   padding: 15px;
   font-weight: 600;
 }
-.php-email-form .error-message {
-  display: none;
-  color: var(--color-white);
-  background: var(--color-red);
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
+
 .contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
-.php-email-form .error-message br+br {
-  margin-top: 25px;
-}
+
 .contact .php-email-form .sent-message {
   display: none;
   color: var(--color-white);
@@ -1203,21 +1139,8 @@ section {
   padding: 15px;
   font-weight: 600;
 }
-.php-email-form .sent-message {
-  display: none;
-  color: var(--color-white);
-  background: var(--color-green);
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
+
 .contact .php-email-form .loading {
-  display: none;
-  background: var(--color-white);
-  text-align: center;
-  padding: 15px;
-}
-.php-email-form .loading {
   display: none;
   background: var(--color-white);
   text-align: center;
@@ -1227,7 +1150,7 @@ section {
 .contact .php-email-form .loading:before {
   content: "";
   display: inline-block;
-  border-radius: 50%;
+ /* border-radius: 50%;*/
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
@@ -1236,47 +1159,27 @@ section {
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--color-green);
-  border-top-color: var(--color-white);
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
+
 .contact .php-email-form .form-group {
   margin-bottom: 20px;
 }
-.php-email-form .form-group {
-  margin-bottom: 20px;
-}
+
 .contact .php-email-form input,
 .contact .php-email-form textarea {
   padding: 10px 14px;
-  border-radius: 0;
+ /* border-radius: 0;*/
   box-shadow: none;
   font-size: 15px;
 }
-.php-email-form input,
-.contact .php-email-form input::focus,.php-email-form textarea {
-  padding: 10px 14px;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 15px;
-}
+
+.contact .php-email-form input::focus,
 .contact .php-email-form textarea::focus {
   background-color: var(--color-primary);
 }
-.php-email-form textarea::focus {
-  background-color: var(--color-primary);
-}
+
 .contact .php-email-form button[type=submit] {
   background: white;
-  border-radius: 25px;
+ /* border-radius: 25px;*/
   border: 1px solid #00aad7;
 ;
   padding: 10px 30px;
@@ -1284,21 +1187,8 @@ section {
   transition: 0.4s;
   cursor: pointer;
 }
-.php-email-form button[type=submit] {
-  background: white;
-  border-radius: 25px;
-  border: 1px solid #00aad7;
-;
-  padding: 10px 30px;
-  color: #00aad7;
-  transition: 0.4s;
-  cursor: pointer;
-}
+
 .contact .php-email-form button[type=submit]:hover {
-  background: #00aad7;
-  color:white;
-}
-.php-email-form button[type=submit]:hover {
   background: #00aad7;
   color:white;
 }
@@ -1399,8 +1289,9 @@ section {
 
 .footer .footer-legal {
   background:white ;
-  padding: 40px 0;
-
+  padding: 40px 15px;
+ /* border-radius: 15px;*/
+  
 }
 
 .footer .footer-legal .social-links a {
@@ -1409,7 +1300,7 @@ section {
   width: 40px;
   height: 40px;
   background-color: black;
-  border-radius: 50%;
+ /* border-radius: 50%;*/
   color: black;
   line-height: 40px;
 }
@@ -1429,153 +1320,4 @@ section {
 
 .footer .credits a {
   color: var(--color-white);
-}
-
-
-/* 44JA Adjustments */
-
-#contact{ 
-  padding: 0 !important;
-}
-.check-termos-condicoes, .l-termos-condicoes{
-/*  */
-display: inline;
-}
-.l-termos-condicoes,.l-newsletter{
-  color: var(--color-links);
-  text-decoration: none;
-  font-size: 10px;
-  vertical-align: text-top;
-  padding-top: 1px;
-}
-.t-bold{
-  font-weight: 900;
-}
-.contact .info-item a{
-  color: white;
-}
-
-
-/* FOOTER-IMG-TERMOS E POl... */
-.images img{
-  display: inline-block;
-}
-.footer{
-  padding-bottom: 20px;
-}
-.t-c .hide, .p-h-s{
-  visibility:hidden;
-}
-.t-c .show{
-  visibility:visible;
-}
-.t-c p{
-  margin: 0;
-}
-
-
-/* orcamentos */
-.container-or{
-  text-align: center;
-  background-color: #012241;
-  color: white;
-  padding: 20px 0;
-  margin-top: -65px;
-  z-index: 0;
-  position: relative;
-
-}
-
-.input-txt:not(:first-of-type){
-  margin-left: 40px;
-}
-.input-txt{
-  font-size: 18px;
-  border: 1px solid transparent;
-  padding: 5px;
-}
-.sub-but{
-  margin-left: 40px;
-  background-color: #00aad7;
-  border: 1px solid transparent;
-  padding: 7px 5px;
-  color: white;
-  /* margin-bottom: 1px; */
-}
-.sub-but:hover{
-  color: #00aad7;
-  background-color: white;
-  border: 1px solid #00aad7;
-}
-
-.input-txt, .sub-but{
-  display: inline-block;
-}
-.t-2{
-  margin-bottom: 30px;
-}
-
-.table-partner{
-  width: 100%;
-}
-
-.table-partener .row .col-lg-2,.table-partener .row .col-md-2,
-.table-partener .row .col-lg-4,.table-partener .row .col-md-6{
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-/* Contactos.php */
-.left-container p{
-  color: black;
-}
-.main-container{
-  width: 100%;
-  padding: 0 100px;
-  padding-bottom: 60px;
-  height: 100%;
-}
-.left-container,.right-container{
-  text-align: left;
-  max-width: 100%;
-}
-
-.left-container{
-  display: inline-block;
-  width: 34%;
-  vertical-align: top;
-}
-.right-container{
-  display: inline-block;
-  width: 65%;
-}
-.main-container h1{
-  text-align: center;
-  color: white;
-  margin-bottom: 30px;
-}
-.map{
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-.container-md{
-  padding-bottom: 30px;
-}
-.add-bkg{
-  background-image: url("/assets/img/drpool/clark-tai-nq18MYhxdGs-unsplash-scaled.webp");
-  background-size: 100%;
-  width: 100%;
-  height: 100%;
-}
-.disabled{
-  opacity: 0.5;
-  color: gray !important;
-  border-color: gray !important;
-}
-.disabled:hover{
-  background-color: white !important;
-  cursor:none;
-}
-.g-recaptcha{
-    margin-bottom:15px;
 }

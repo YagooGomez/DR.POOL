@@ -4,7 +4,6 @@
 * Author: BootstrapMade.com
 * License: https:///bootstrapmade.com/license/
 */
-
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    * Open and close the search form.
-   */
+   
   const searchOpen = document.querySelector('.js-search-open');
   const searchClose = document.querySelector('.js-search-close');
   const searchWrap = document.querySelector(".js-search-form-wrap");
@@ -127,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   searchClose.addEventListener("click", (e) => {
     e.preventDefault();
     searchWrap.classList.remove("active");
-  });
+  }); */
 
   /**
    * Initiate glightbox
@@ -151,28 +150,4 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
-
-  // Onscroll bottom show Termos e condições
-  // 44JA
-
-  window.onscroll = function(ev) {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      var element = document.getElementById("p-h-s");
-        element.classList.add("show");
-        element.classList.remove("hide");
-
-
-    }
-    else{
-      var element = document.getElementById("p-h-s");
-        element.classList.add("hide");
-        element.classList.remove("show");
-
-
-    }
-    // if((window.innerHeight + window.scrollY) >= document.body.offsetHeight-300){
-    //   var element = document.getElementById("t-c");
-    //   element.classList.add("hide");
-    // }
-    };
 });

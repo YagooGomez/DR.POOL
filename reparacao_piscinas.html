@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DR POOL</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logotipos/Icons/DR Pool Small Logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS Files -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Responsive Styles */
+    :root {
+      --primary-color: #00aad7;
+      --dark-blue: #012241;
+    }
+
+    /* General Responsive Styles */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .rounded-img {
+     /* border-radius: 50px;*/
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .service-image-container {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+     /* border-radius: 50px; */
+    }
+
+    .footer-info p {
+    font-family: Montserrat;
+  }
+    @media (min-width: 768px) {
+      .service-image-container {
+        width: 550px;
+        flex-shrink: 0;
+      }
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: clamp(0.875rem, 2vw, 0.9375rem);
+    }
+
+    .service-title {
+      font-size: clamp(1.25rem, 4vw, 1.875rem);
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    /* Header Responsive Styles */
+    .logo img {
+      max-height: 50px;
+      width: auto;
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Service Section Responsive Styles */
+    .service-section {
+      margin-bottom: 2rem;
+    }
+
+    .service-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Footer Responsive Styles */
+    .footer-container {
+      background-color: var(--dark-blue);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logos {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+
+    .footer-logos img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .footer-info p {
+      margin: 0.5rem 0;
+      font-size: clamp(0.75rem, 2vw, 0.875rem);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: clamp(0.75rem, 2vw, 0.875rem);
+    }
+
+    /* Fix for alternating layout in mobile view */
+    @media (max-width: 767px) {
+      .post-entry-2.half {
+        flex-direction: column !important;
+      }
+
+      .order-md-1 {
+        order: 1 !important;
+      }
+
+      .order-2 {
+        order: 0 !important;
+      }
+
+      .ps-md-5, .pe-md-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      .me-4 {
+        margin-right: 0 !important;
+      }
+
+      .service-content {
+        text-align: center;
+        padding: 0 1rem;
+        margin-top: 1rem !important;
+      }
+      
+      /* Add space between sections on mobile */
+      .service-section {
+        margin-bottom: 3rem;
+      }
+      
+      /* Fix for main content padding on mobile */
+      #main {
+        padding-top: 80px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .ps-md-5, .pe-md-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      
+      /* Adjust image container width for tablets */
+      .service-image-container {
+        width: 45%;
+      }
+      
+      /* Fix spacing between image and content */
+      .me-4 {
+        margin-right: 1rem !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      
+      .rounded-img {
+        height: 200px;
+       /* border-radius: 30px;*/
+      }
+      
+      .service-image-container {
+        height: 200px;
+       /* border-radius: 30px;*/
+      }
+      
+      /* Improve section spacing on small devices */
+      .section-title {
+        margin-top: 1.5rem;
+      }
+      
+      /* Adjust footer spacing on small devices */
+      .footer-logos {
+        gap: 0.5rem;
+      }
+    }
+
+    @media (min-width: 1921px) {
+      .container {
+        max-width: 1800px;
+      }
+
+      .section-title {
+        font-size: 3rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.25rem;
+      }
+
+      .service-title {
+        font-size: 2.25rem;
+      }
+      
+      .rounded-img {
+        height: 300px;
+      }
+      
+      .service-image-container {
+        width: 650px;
+        height: 300px;
+      }
+    }
+
+    /* Extra small devices (phones, 320px and up) */
+    @media (min-width: 320px) and (max-width: 575px) {
+      .rounded-img {
+       /* border-radius: 30px;*/
+      }
+      
+      .service-image-container {
+       /* border-radius: 30px;*/
+      }
+
+      .footer-logos img {
+        max-width: 80px;
+      }
+      
+      /* Fix header spacing on very small devices */
+      .header {
+        padding: 10px 0;
+      }
+      
+      .logo img {
+        max-height: 40px;
+      }
+    }
+    
+    /* Fix for main content padding */
+    #main {
+      padding-top: 100px;
+    }
+    
+    /* Fix for service sections alignment */
+    .d-md-flex {
+      align-items: center;
+    }
+    
+    /* Ensure proper spacing between sections */
+    #posts {
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/Logotipos/drpoolLogotipo.png" alt="DR POOL Logo"> 
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="quem_somos.html">QUEM SOMOS</a></li>
+
+          <li class="dropdown"><a href="#"><span>SERVIÇOS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="construcao.html">Construção de Piscinas</a></li>
+              <li><a href="reparacao_piscinas.html">Reparação de Piscinas</a></li>
+              <li><a href="manutencaolimpeza_piscinas.html">Manutenção e Limpeza de Piscinas</a></li>
+              <li><a href="instalacao_equipamentos.html">Instalação de Equipamentos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>PRODUTOS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="material_exterior_piscina.html">Material de Exterior de Piscina</a></li>
+              <li><a href="venda_consumiveis.html">Venda de Consúmiveis</a></li>
+            </ul>
+          </li>
+          <li><a href="piscinas.html">PISCINAS</a></li>
+          <li><a href="contactos.html">CONTACTOS</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <div class="position-relative">
+        <a href="https://www.facebook.com/people/Dr-Pool/100077337159301/?ref=py_c" class="mx-2">
+          <img class="social-icon" src="assets/img/drpool/fbIcon.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/drpool_oficial" class="mx-2"><img width="30" height="30" src="assets/img/Logotipos/Icons/Instagram Azul.png"></a>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="posts" class="posts">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-4">
+            <h1 class="section-title">Reparação de Piscinas</h1>
+            <p class="section-subtitle"><b>A dr pool conta com a experiência de profissionais com mais de 20 anos em reparações e manutenções de piscinas.<br>
+              Com o nosso serviço poderá continuar a usufruir da sua piscina com a garantia de qualidade, higiene e segurança máxima.</b></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Service 1 -->
+          <div class="col-12 service-section">
+            <div class="d-md-flex post-entry-2 half">
+              <div class="service-image-container me-md-4">
+                <img class="rounded-img" src="assets/img/drpool/images (25).jpg" alt="Alterações de Formatos">
+              </div>
+              <div class="service-content ps-md-5 mt-4 mt-md-0">
+                <h2 class="service-title">Alterações de Formatos<br><span style="font-size:clamp(0.75rem, 2vw, 0.9375rem)">(Comprimento, Largura e Profundidade)</span></h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-12 service-section">
+            <div class="d-md-flex post-entry-2 half">
+              <div class="service-content pe-md-5 mt-4 mt-md-0 order-md-1">
+                <h2 class="service-title">Reparação de Pisos e Pavimentos</h2>
+              </div>
+              <div class="service-image-container me-md-4 order-2">
+                <img class="rounded-img" src="assets/img/drpool/20.jpg" alt="Reparação de Pisos e Pavimentos">
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-12 service-section">
+            <div class="d-md-flex post-entry-2 half">
+              <div class="service-image-container me-md-4">
+                <img class="rounded-img" src="assets/img/drpool/21.jpg" alt="Mudança de Pastilhas">
+              </div>
+              <div class="service-content ps-md-5 mt-4 mt-md-0">
+                <h2 class="service-title">Mudança de Pastilhas</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-12 service-section">
+            <div class="d-md-flex post-entry-2 half">
+              <div class="service-content pe-md-5 mt-4 mt-md-0 order-md-1">
+                <h2 class="service-title">Reparação e Preenchimento de Fendas e Rachas</h2>
+              </div>
+              <div class="service-image-container me-md-4 order-2">
+                <img class="rounded-img" src="assets/img/drpool/22.jpg" alt="Reparação e Preenchimento de Fendas e Rachas">
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-12 service-section">
+            <div class="d-md-flex post-entry-2 half">
+              <div class="service-image-container me-md-4">
+                <img class="rounded-img" src="assets/img/drpool/5.jpg" alt="Conversão do Revestimento de Piscinas">
+              </div>
+              <div class="service-content ps-md-5 mt-4 mt-md-0">
+                <h2 class="service-title">Conversão do Revestimento de Piscinas (de Pastilha para Tela)</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-12 service-section">
+            <div class="d-md-flex post-entry-2 half">
+              <div class="service-content pe-md-5 mt-4 mt-md-0 order-md-1">
+                <h2 class="service-title">Reparação de Motores de Piscina</h2>
+              </div>
+              <div class="service-image-container me-md-4 order-2">
+                <img class="rounded-img" src="assets/img/drpool/4.jpg" alt="Reparação de Motores de Piscina">
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="col-12 service-section">
+            <div class="d-md-flex post-entry-2 half">
+              <div class="service-image-container me-md-4">
+                <img class="rounded-img" src="assets/img/drpool/23.jpg" alt="Reparação de Tubagens">
+              </div>
+              <div class="service-content ps-md-5 mt-4 mt-md-0">
+                <h2 class="service-title">Reparação de Tubagens</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="footer-container">
+      <img class="footer-logo" src="assets/img/Logotipos/drpoolLogotipo.png" alt="Dr.pool">
+      
+      <div class="footer-logos">
+        <img src="assets/img/Logotipos/IMPIC logo.png" alt="IMPIC logo">
+        <img src="assets/img/Logotipos/AICCOPN logo.png" alt="AICCOPN logo">
+        <img src="assets/img/Logotipos/APP logo.png" alt="APP logo">
+      </div>
+      
+      <div class="footer-info">
+        <p>&copy; 2025 Todos os direitos reservados, <a href="https://www.360elite.pt/">Desenvolvido por 360Elite TGEI</a></p>
+        <p>📍 R. Monte Castêlo 720 R/C, E, 4460-055 Guifões 📞 22 954 0579 | ✉️ <a href="mailto:drpool@drpool.pt"style="color: white; text-decoration: underline;">drpool@drpool.pt</a></p>
+        <a href="https://www.livroreclamacoes.pt/" target="_blank">
+          <img src="https://www.cm-penela.pt/uploads/9635daef890b86e334821595a321c74f.png" style="max-width: 150px; height: auto;" alt="Livro de Reclamações">
+        </a>
+      </div>
+      
+      <div class="footer-links">
+        <a href="politicadeprivacidade.html">Política & Privacidade</a>
+        <a href="termosecondicoes.html">Termos & Condições</a>
+      </div>
+    </div>
+  </footer>
+  
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
